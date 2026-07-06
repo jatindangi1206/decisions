@@ -39,8 +39,7 @@ def main():
           f"({'OK — walls make Z and V differ' if n else 'WARNING: none — check maze/goal'})")
 
     frames = render_states(ds, buf.states_phys, probe_idx[:4])
-    print(f"\nrendered frames shape={frames.shape} dtype={frames.dtype} "
-          f"(expect (4,3,{cfg.get('_', '')}64,64))")
+    print(f"\nrendered frames shape={frames.shape} dtype={frames.dtype} (expect (4, 3, 64, 64))")
     try:
         import matplotlib
         matplotlib.use("Agg")

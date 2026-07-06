@@ -237,10 +237,12 @@ def render_states(ds, states_phys, idx, size=64):
     a time; batch/offscreen-pool it only if pixel pre-render becomes the bottleneck.
     """
     env = ds.recover_environment(render_mode="rgb_array")
-    point = getattr(env.unwrapped, "point_env", env.unwrapped)  # PointMaze wraps inner Point env
+    env.reset(seed=0)  # satisfy OrderEnforcing + init the renderer; set_state below sets the pose
+    u = env.unwrapped
+    point = getattr(u, "point_env", u)  # PointMaze wraps an inner Point MuJoCo env
     frames = np.empty((len(idx), 3, size, size), np.uint8)
     for j, i in enumerate(idx):
         x, y, vx, vy = states_phys[i]
         point.set_state(np.array([x, y], np.float64), np.array([vx, vy], np.float64))
-        frames[j] = preprocess_frame(env.render(), size)
+        frames[j] = preprocess_frame(u.render(), size)  # unwrapped: skip per-frame wrapper re-gating
     return frames
