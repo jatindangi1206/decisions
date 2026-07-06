@@ -1,0 +1,62 @@
+# PRH-RL — Platonic Representation Hypothesis in the decision/RL domain (Claim A).
+# This file is PRE-REGISTERED. Write success_rule BEFORE running; do not edit it after
+# seeing results. Everything that defines the experiment lives here; hyperparameters that
+# don't change the experiment (cql alpha, ema decay, ...) live in objectives.py.
+
+experiment:
+  name: prh_rl_claimA
+  seeds: [0, 1, 2, 3, 4]        # 5 independent inits per objective
+  latent_dim: 64                # same D for "state" and "pixels", same for every objective
+  obs_type: state               # "state" = fast plumbing check | "pixels" = the real study
+
+dataset:
+  # PointMaze WITH interior walls, so geodesic (walls-aware) shortest-path-to-goal differs
+  # from straight-line distance. That gap is what makes reality-geometry and value-geometry
+  # genuinely different. NOT umaze. First candidate that resolves against installed Minari wins.
+  candidates:
+    - "D4RL/pointmaze/medium-v2"
+    - "pointmaze-medium-v2"
+    - "D4RL/pointmaze/large-v2"
+    - "pointmaze-large-v2"
+  max_episodes: 400             # cap offline buffer size
+
+probe:
+  size: 1000                    # fixed probe STATES, sampled once, stamped with provenance
+  seed: 12345
+
+train:
+  # The competence ladder = the x-axis. Encoder is checkpointed at each step below (plus an
+  # untrained step-0 checkpoint = the random-init null). Paper-scale schedule (override here):
+  #   [1000, 2000, 5000, 10000, 20000, 50000, 100000]
+  schedule: [500, 1000, 2000, 5000, 10000]
+  batch_size: 256
+  lr: 0.0003
+  gamma: 0.99
+  device: auto            # "auto" -> cuda if available else cpu; force with "cuda"/"cpu"
+
+competence:
+  episodes: 20                  # policies (bc, cql): episodes rolled out in the env
+  max_steps: 400                # per-episode cap
+  heldout_frac: 0.1             # predictors (jepa, reward): held-out transition split
+
+# All four consume the ONE shared encoder; objective-specific parts live in heads.
+# To add IQL / a world model / IRL later: add one class in objectives.py and list it here.
+objectives: [bc, cql, jepa, reward]
+
+geometry:
+  knn_k: 10                     # mutual-kNN neighborhood — the PRIMARY, local metric
+  # CKA (secondary, global) and participation ratio are also logged at every checkpoint.
+  # Note: global CKA convergence tends to wash out under calibration (the Aristotelian
+  # critique), so mutual-kNN is the headline number, not CKA.
+
+# ---------------------------------------------------------------------------------------
+# PRE-REGISTERED SUCCESS RULE — do not edit after running.
+# ---------------------------------------------------------------------------------------
+success_rule:
+  claim: >
+    Claim A: as a decision model gets more capable, independently-trained versions of it
+    become more similar inside. Deliverable is a TREND (curve), not a one-shot comparison.
+  test: spearman_between_seed_similarity_vs_measured_competence
+  decision_objectives: [bc, cql]     # the objectives the claim is about
+  supports_if: "Spearman r > 0 AND permutation p <= 0.05 for the decision objectives"
+  permutation_iters: 10000
