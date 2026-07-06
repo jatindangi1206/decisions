@@ -1,0 +1,190 @@
+{
+  "provenance": {
+    "dataset_id": "D4RL/pointmaze/medium-v2",
+    "minari_version": "0.5.3",
+    "n_episodes_used": null,
+    "n_states": 84659,
+    "n_transitions": 84259,
+    "probe_seed": 12345,
+    "probe_size": 1000,
+    "maze_shape": [
+      8,
+      8
+    ],
+    "maze_scaling": 1.0,
+    "provenance_sha": "0f7a92ae5595f85b"
+  },
+  "success_rule": {
+    "claim": "Claim A: as a decision model gets more capable, independently-trained versions of it become more similar inside. Deliverable is a TREND (curve), not a one-shot comparison.\n",
+    "test": "spearman_between_seed_similarity_vs_measured_competence",
+    "decision_objectives": [
+      "bc",
+      "cql"
+    ],
+    "supports_if": "Spearman r > 0 AND permutation p <= 0.05 for the decision objectives",
+    "permutation_iters": 10000
+  },
+  "objectives": {
+    "bc": {
+      "n_points": 6,
+      "spearman_r": -0.27322953332351235,
+      "perm_p": 0.6192380761923808,
+      "is_decision_objective": true,
+      "passes_rule": false,
+      "competence": [
+        0.06999999999999999,
+        0.19,
+        0.19,
+        0.2,
+        0.19999999999999998,
+        0.19
+      ],
+      "between_seed_knn": [
+        0.7266400000000001,
+        0.604,
+        0.6793,
+        0.6780700000000001,
+        0.66405,
+        0.6232800000000001
+      ],
+      "align_Z_knn": [
+        0.2439,
+        0.19388,
+        0.2104,
+        0.20912000000000003,
+        0.20194,
+        0.19392
+      ],
+      "align_V_knn": [
+        0.0168,
+        0.015540000000000002,
+        0.01664,
+        0.01562,
+        0.01542,
+        0.01492
+      ],
+      "drifts_toward": "reality"
+    },
+    "cql": {
+      "n_points": 6,
+      "spearman_r": 0.7142857142857143,
+      "perm_p": 0.137986201379862,
+      "is_decision_objective": true,
+      "passes_rule": false,
+      "competence": [
+        0.02,
+        0.07999999999999999,
+        0.19,
+        0.18,
+        0.22999999999999998,
+        0.24000000000000005
+      ],
+      "between_seed_knn": [
+        0.7266400000000001,
+        0.54891,
+        0.7033699999999999,
+        0.7765500000000001,
+        0.8015399999999999,
+        0.80776
+      ],
+      "align_Z_knn": [
+        0.2439,
+        0.22075999999999998,
+        0.22854000000000002,
+        0.2424,
+        0.25122,
+        0.25478000000000006
+      ],
+      "align_V_knn": [
+        0.0168,
+        0.015360000000000002,
+        0.015999999999999997,
+        0.01614,
+        0.01642,
+        0.01572
+      ],
+      "drifts_toward": "reality"
+    },
+    "jepa": {
+      "n_points": 6,
+      "spearman_r": -0.942857142857143,
+      "perm_p": 0.014798520147985201,
+      "is_decision_objective": false,
+      "passes_rule": false,
+      "competence": [
+        0.0,
+        0.9996568037100065,
+        0.9999316660662751,
+        0.9999835779213487,
+        0.9999573665474436,
+        0.9999948645350072
+      ],
+      "between_seed_knn": [
+        0.7266400000000001,
+        0.3863,
+        0.29723,
+        0.28974,
+        0.28929,
+        0.28151000000000004
+      ],
+      "align_Z_knn": [
+        0.2439,
+        0.20158,
+        0.16016000000000002,
+        0.14846,
+        0.14486,
+        0.14214
+      ],
+      "align_V_knn": [
+        0.0168,
+        0.014839999999999997,
+        0.01432,
+        0.013940000000000003,
+        0.014280000000000001,
+        0.01422
+      ],
+      "drifts_toward": "reality"
+    },
+    "reward": {
+      "n_points": 6,
+      "spearman_r": -0.3142857142857143,
+      "perm_p": 0.5664433556644336,
+      "is_decision_objective": false,
+      "passes_rule": false,
+      "competence": [
+        0.0,
+        0.0036762354280091445,
+        0.05807815147664499,
+        0.16008172079044547,
+        0.2118342420873652,
+        0.2358169692165779
+      ],
+      "between_seed_knn": [
+        0.7266400000000001,
+        0.71359,
+        0.53779,
+        0.67398,
+        0.7171700000000001,
+        0.71025
+      ],
+      "align_Z_knn": [
+        0.2439,
+        0.25696,
+        0.22492,
+        0.23896,
+        0.24300000000000002,
+        0.2367
+      ],
+      "align_V_knn": [
+        0.0168,
+        0.01608,
+        0.014859999999999998,
+        0.015459999999999998,
+        0.015360000000000002,
+        0.016260000000000004
+      ],
+      "drifts_toward": "reality"
+    }
+  },
+  "claim_A_supported": false
+}
