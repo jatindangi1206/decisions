@@ -65,7 +65,10 @@ Competence is the **x-axis**, measured at every checkpoint, keyed by `(objective
 
 - **Policies (BC, CQL)** → roll out ~20 episodes in the env; competence = mean return (success rate
   logged too).
-- **Predictors (JEPA, reward)** → held-out prediction error, reported as an R²-like score in [0,1].
+- **Predictors** → held-out predictive score in [0,1]. **reward** = R² on return-to-go. **JEPA** =
+  multi-step (horizon-5) retrieval accuracy of the rolled-out latent, with VICReg variance+covariance
+  anti-collapse in the loss — so competence tracks genuinely richer representation, not a collapsed
+  shortcut (the earlier 1-step R² saturated to ~1.0 while participation ratio collapsed 2.4→1.2).
 
 Each objective is trained long and checkpointed across a schedule (`train.schedule`), so it becomes
 a sequence of encoders weak→strong. (Width can be a second axis later; checkpoints only for now.)
@@ -123,8 +126,9 @@ python run.py --obs-type pixels --stage geometry
 python run.py --obs-type pixels --stage analyze
 ```
 
-Set `train.device: auto` (default) to use CUDA when present. For **paper scale**, widen
-`train.schedule` to `[1000, 2000, 5000, 10000, 20000, 50000, 100000]` in `config.yaml`.
+Set `train.device: auto` (default) to use CUDA when present. `train.schedule` is the pre-registered
+**paper-scale** ladder `[1000, 2000, 5000, 10000, 20000, 50000, 100000]` (7 rungs to 100k). The
+earlier 10k-max run is kept for comparison under `runs/archive/pixels_schedule_10k/`.
 
 **Outputs** (`runs/<name>_<obs_type>/`): `probe_provenance.json`, `competence.jsonl`,
 `geometry.jsonl`, `verdict.json`, and per-objective `plots/<obj>.png` (similarity-vs-competence with

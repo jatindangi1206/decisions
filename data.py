@@ -43,6 +43,7 @@ class Buffer:
     rew: np.ndarray           # (T,)
     done: np.ndarray          # (T,)
     rtg: np.ndarray           # (T,) discounted return-to-go
+    ep_end: np.ndarray        # (T,) exclusive transition-index end of each transition's episode
     dataset_id: str
     maze: object              # gymnasium_robotics Maze (for geodesic V + rendering)
     minari_version: str
@@ -80,6 +81,7 @@ def load_buffer(cfg):
 
     sp, sg = [], []           # per-state physical + goal
     io, ino, ac, rw, dn, rt = [], [], [], [], [], []
+    ee = []                   # per-transition episode-end (exclusive), for multi-step targets
     base = 0
     for k, ep in enumerate(ds.iterate_episodes()):
         if k >= max_ep:
@@ -103,6 +105,7 @@ def load_buffer(cfg):
         for t in range(L):
             io.append(base + t)
             ino.append(base + t + 1)
+        ee.extend([len(io)] * L)  # len(io) now == this episode's exclusive transition end
         ac.append(np.asarray(ep.actions, np.float32)[:L])
         rw.append(rew)
         dn.append(term.astype(np.float32))
@@ -124,6 +127,7 @@ def load_buffer(cfg):
         rew=np.concatenate(rw),
         done=np.concatenate(dn),
         rtg=np.concatenate(rt),
+        ep_end=np.asarray(ee, np.int64),
         dataset_id=dataset_id,
         maze=ds.recover_environment().unwrapped.maze,
         minari_version=ver,

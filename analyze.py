@@ -72,6 +72,16 @@ def run(cfg, run_dir, meta):
         }
         _plot(run_dir, obj, x, y, aZ, aV, geo[(obj, steps[0])].get("gaussian_null_knn"), r, p, meta)
 
+    # JEPA competence-axis sanity: if participation ratio collapses, "competence" is fake.
+    jsteps = sorted(s for (o, s) in geo if o == "jepa")
+    if jsteps:
+        pr = [geo[("jepa", s)]["participation_ratio"] for s in jsteps]
+        trained = pr[1:] if len(pr) > 1 else pr
+        verdict["jepa_pr_check"] = {
+            "steps": jsteps, "participation_ratio": pr,
+            "non_collapse": bool(trained and trained[-1] >= 0.9 * trained[0]),
+        }
+
     dec = [v for o, v in verdict["objectives"].items() if o in decision and "passes_rule" in v]
     verdict["claim_A_supported"] = bool(dec) and all(v["passes_rule"] for v in dec)
     json.dump(verdict, open(os.path.join(run_dir, "verdict.json"), "w"), indent=2)
@@ -118,4 +128,10 @@ def _report(verdict, decision, run_dir):
     print("-" * 72)
     print(f"Claim A supported (all decision objectives rise with competence): "
           f"{verdict['claim_A_supported']}")
+    j = verdict.get("jepa_pr_check")
+    if j:
+        pr = [round(x, 2) for x in j["participation_ratio"]]
+        state = "healthy — competence axis is real" if j["non_collapse"] \
+            else "STILL COLLAPSING — JEPA competence is fake"
+        print(f"JEPA participation ratio {pr}  non-collapse: {j['non_collapse']} ({state})")
     print(f"verdict + plots written to {run_dir}/")

@@ -9,9 +9,10 @@ import torch
 
 from data import PIX_SIZE, preprocess_frame, state_vectors
 from models import Encoder
-from objectives import OBJECTIVES
+from objectives import OBJECTIVES, JEPA_HORIZON
 
-HELDOUT_CAP = 4096  # cap predictor competence eval; full held-out set is overkill
+HELDOUT_CAP = 4096         # cap predictor competence eval; full held-out set is overkill
+JEPA_RETRIEVAL_CAP = 2048  # bounds the NxN retrieval distance matrix for JEPA multi-step competence
 
 
 def resolve_device(name):
@@ -42,6 +43,7 @@ class Ctx:
         self.heldout_ti = perm[:n_ho]
         self.train_ti = perm[n_ho:]
         self.heldout = self._batch(self.heldout_ti[:HELDOUT_CAP])
+        self.jepa_ms = self._build_multistep(JEPA_HORIZON)  # multi-step held-out set for JEPA
 
     # --- the only mode-dependent piece ---
     def make_input(self, state_idx):
@@ -72,6 +74,22 @@ class Ctx:
 
     def sample(self, rng, bs):
         return self._batch(rng.choice(self.train_ti, size=bs, replace=False))
+
+    def _build_multistep(self, k):
+        """Held-out samples whose k-step future stays inside the same episode: obs at t, the state
+        at t+k, and the k intermediate actions. Used only by JEPA's multi-step competence."""
+        b = self.buf
+        ho = self.heldout_ti
+        valid = ho[(ho + k) <= b.ep_end[ho]]
+        if len(valid) == 0:
+            return None
+        valid = valid[:JEPA_RETRIEVAL_CAP]
+        return {
+            "obs0": self.make_input(b.i_obs[valid]),
+            "target_in": self.make_input(b.i_obs[valid] + k),  # state k steps ahead (same episode)
+            "acts": [torch.as_tensor(b.act[valid + j], dtype=torch.float32, device=self.device)
+                     for j in range(k)],
+        }
 
 
 def obs_shape(cfg):

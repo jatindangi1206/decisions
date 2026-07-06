@@ -26,9 +26,10 @@ probe:
 
 train:
   # The competence ladder = the x-axis. Encoder is checkpointed at each step below (plus an
-  # untrained step-0 checkpoint = the random-init null). Paper-scale schedule (override here):
-  #   [1000, 2000, 5000, 10000, 20000, 50000, 100000]
-  schedule: [500, 1000, 2000, 5000, 10000]
+  # untrained step-0 checkpoint = the random-init null). Pre-registered PAPER-SCALE schedule:
+  # 7 rungs to 100k gives BC/CQL room to actually climb and enough points for the permutation
+  # test to reach p<=0.05. (The earlier 10k-max run is archived under runs/archive/.)
+  schedule: [1000, 2000, 5000, 10000, 20000, 50000, 100000]
   batch_size: 256
   lr: 0.0003
   gamma: 0.99

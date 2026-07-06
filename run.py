@@ -86,6 +86,8 @@ def main():
     obs_type = cfg["experiment"]["obs_type"]
     run_dir = args.run_dir or os.path.join("runs", f"{cfg['experiment']['name']}_{obs_type}")
     os.makedirs(run_dir, exist_ok=True)
+    print(f"[config] obs_type={obs_type} seeds={cfg['experiment']['seeds']} "
+          f"objectives={cfg['objectives']}\n[config] schedule={cfg['train']['schedule']}")
 
     buf, ds = load_buffer(cfg)
     probe_idx, Z, V, meta = build_probe(buf, cfg, run_dir)
