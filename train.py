@@ -96,6 +96,11 @@ def obs_shape(cfg):
     return (3, PIX_SIZE, PIX_SIZE) if cfg["experiment"]["obs_type"] == "pixels" else (6,)
 
 
+def build_encoder(cfg):
+    e = cfg["experiment"]
+    return Encoder(e["obs_type"], obs_shape(cfg), e["latent_dim"], e.get("enc_width", 64))
+
+
 def _ckpt_path(run_dir, obj, seed, step):
     return os.path.join(run_dir, "ckpts", f"{obj}_{seed}_{step}.pt")
 
@@ -107,8 +112,7 @@ def train_one(obj_name, seed, ctx, cfg, run_dir):
     np.random.seed(seed)
     rng = np.random.default_rng(seed)
 
-    encoder = Encoder(cfg["experiment"]["obs_type"], obs_shape(cfg),
-                      cfg["experiment"]["latent_dim"]).to(ctx.device)
+    encoder = build_encoder(cfg).to(ctx.device)
     obj = OBJECTIVES[obj_name](encoder, ctx)
     opt = torch.optim.Adam(list(encoder.parameters()) + obj.extra_params(), lr=cfg["train"]["lr"])
 
@@ -139,6 +143,6 @@ def train_one(obj_name, seed, ctx, cfg, run_dir):
 
 
 def load_encoder(path, cfg, device="cpu"):
-    enc = Encoder(cfg["experiment"]["obs_type"], obs_shape(cfg), cfg["experiment"]["latent_dim"])
+    enc = build_encoder(cfg)
     enc.load_state_dict(torch.load(path, map_location=device))
     return enc.to(device).eval()

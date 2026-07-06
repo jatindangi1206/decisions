@@ -10,23 +10,24 @@ import torch.nn as nn
 
 
 class Encoder(nn.Module):
-    def __init__(self, obs_type, obs_shape, latent_dim):
+    def __init__(self, obs_type, obs_shape, latent_dim, width=64):
         super().__init__()
         self.obs_type = obs_type
         self.latent_dim = latent_dim
         if obs_type == "state":
             (d,) = obs_shape
             self.net = nn.Sequential(
-                nn.Linear(d, 256), nn.ReLU(),
-                nn.Linear(256, 256), nn.ReLU(),
-                nn.Linear(256, latent_dim),
+                nn.Linear(d, 512), nn.ReLU(),
+                nn.Linear(512, 512), nn.ReLU(),
+                nn.Linear(512, latent_dim),
             )
         elif obs_type == "pixels":
+            w = width  # base channels; conv widths scale as [w, 2w, 4w, 4w]
             conv = nn.Sequential(
-                nn.Conv2d(obs_shape[0], 32, 4, 2, 1), nn.ReLU(),  # 64 -> 32
-                nn.Conv2d(32, 64, 4, 2, 1), nn.ReLU(),            # 32 -> 16
-                nn.Conv2d(64, 64, 4, 2, 1), nn.ReLU(),            # 16 -> 8
-                nn.Conv2d(64, 64, 4, 2, 1), nn.ReLU(),            # 8  -> 4
+                nn.Conv2d(obs_shape[0], w, 4, 2, 1), nn.ReLU(),   # 64 -> 32
+                nn.Conv2d(w, 2 * w, 4, 2, 1), nn.ReLU(),          # 32 -> 16
+                nn.Conv2d(2 * w, 4 * w, 4, 2, 1), nn.ReLU(),      # 16 -> 8
+                nn.Conv2d(4 * w, 4 * w, 4, 2, 1), nn.ReLU(),      # 8  -> 4
                 nn.Flatten(),
             )
             with torch.no_grad():

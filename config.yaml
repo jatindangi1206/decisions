@@ -5,8 +5,12 @@
 
 experiment:
   name: prh_rl_claimA
-  seeds: [0, 1, 2, 3, 4]        # 5 independent inits per objective
-  latent_dim: 64                # same D for "state" and "pixels", same for every objective
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7]  # 8 independent inits — between-seed knn averages C(8,2)=28 pairs
+  latent_dim: 256               # same D for "state" and "pixels", same for every objective
+  enc_width: 64                 # CNN base channels (pixels). Encoder scales as [w,2w,4w,4w].
+                                # CRANK THESE for a bigger model: enc_width 96/128, latent_dim 512.
+                                # Runtime driver = seeds x objectives x max-step x model-FLOPs; past
+                                # ~this size on 2000 episodes you overfit — raise max_episodes too.
   obs_type: state               # "state" = fast plumbing check | "pixels" = the real study
 
 dataset:
@@ -18,10 +22,12 @@ dataset:
     - "pointmaze-medium-v2"
     - "D4RL/pointmaze/large-v2"
     - "pointmaze-large-v2"
-  max_episodes: 400             # cap offline buffer size
+  max_episodes: 2000            # offline buffer (~420k transitions). Pixels pre-render is in RAM:
+                                # ~states x 12 kB (~5 GB here). Raise if you have RAM; a full-dataset
+                                # run needs the memmap upgrade noted in run.py or it will OOM.
 
 probe:
-  size: 1000                    # fixed probe STATES, sampled once, stamped with provenance
+  size: 4000                    # fixed probe STATES, sampled once, stamped with provenance
   seed: 12345
 
 train:
@@ -29,14 +35,14 @@ train:
   # untrained step-0 checkpoint = the random-init null). Pre-registered PAPER-SCALE schedule:
   # 7 rungs to 100k gives BC/CQL room to actually climb and enough points for the permutation
   # test to reach p<=0.05. (The earlier 10k-max run is archived under runs/archive/.)
-  schedule: [1000, 2000, 5000, 10000, 20000, 50000, 100000]
+  schedule: [1000, 2000, 3500, 5000, 7500, 10000, 15000, 25000, 40000, 65000, 100000]
   batch_size: 256
   lr: 0.0003
   gamma: 0.99
   device: auto            # "auto" -> cuda if available else cpu; force with "cuda"/"cpu"
 
 competence:
-  episodes: 20                  # policies (bc, cql): episodes rolled out in the env
+  episodes: 25                  # policies (bc, cql): episodes rolled out in the env (x8 seeds averaged)
   max_steps: 400                # per-episode cap
   heldout_frac: 0.1             # predictors (jepa, reward): held-out transition split
 
