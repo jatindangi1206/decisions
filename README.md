@@ -1,5 +1,9 @@
 # PRH-RL — the Platonic Representation Hypothesis in the decision/RL domain
 
+> **Result:** the pre-registered convergence test is **not supported** — decision models (BC, CQL) do
+> not converge as they get more competent; between-seed similarity is highest at init and falls with
+> training. See **[FINDINGS.md](FINDINGS.md)** for the write-up, numbers, and scope.
+
 **The question is a TREND, not a comparison.** As a decision model gets more *competent*, do
 independently-trained versions of it become more *similar inside*? The deliverable per objective
 is a **curve** — representational similarity (y) vs measured competence (x) — with a trend-test
