@@ -1,0 +1,15 @@
+{
+  "dataset_id": "D4RL/pointmaze/medium-v2",
+  "minari_version": "0.5.3",
+  "n_episodes_used": null,
+  "n_states": 418840,
+  "n_transitions": 416840,
+  "probe_seed": 12345,
+  "probe_size": 4000,
+  "maze_shape": [
+    8,
+    8
+  ],
+  "maze_scaling": 1.0,
+  "provenance_sha": "24b3a6377a010f68"
+}

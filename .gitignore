@@ -2,6 +2,8 @@
 __pycache__/
 *.pyc
 mimic-iv-clinical-database-demo-2.2/
-runs/**/ckpts/   # model checkpoints (~4GB at this scale) — reproducible; keep logs/plots/verdict
+# model checkpoints (~4GB at this scale) — reproducible; keep logs/plots/verdict
+runs/**/ckpts/
+*.pt
 
 .claude/
