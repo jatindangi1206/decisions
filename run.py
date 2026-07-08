@@ -17,8 +17,8 @@ import yaml
 
 import analyze
 from data import build_probe, load_buffer, render_states
-from geometry import (between_seed, collapse_test, gaussian_null_knn, linear_cka,
-                      mutual_knn, participation_ratio)
+from geometry import (between_seed, collapse_test, distance_correlation, gaussian_null_knn,
+                      linear_cka, mutual_knn, participation_ratio)
 from train import Ctx, Encoder, load_encoder, obs_shape, train_one, _ckpt_path
 
 
@@ -37,7 +37,7 @@ def stage_train(cfg, ctx, run_dir):
             train_one(obj, seed, ctx, cfg, run_dir)
 
 
-def stage_geometry(cfg, ctx, run_dir, probe_idx, Z, V, meta):
+def stage_geometry(cfg, ctx, run_dir, probe_idx, Z, V, V_emb, meta):
     k = cfg["geometry"]["knn_k"]
     steps = sorted(set([0] + cfg["train"]["schedule"]))
     seeds = cfg["experiment"]["seeds"]
@@ -58,18 +58,24 @@ def stage_geometry(cfg, ctx, run_dir, probe_idx, Z, V, meta):
                 row = {
                     "objective": obj, "step": step, "n_seeds": len(lat),
                     "between_seed_knn": between_seed(lat, k),                    # HEADLINE (y-axis)
+                    # reality-vs-value: distance-correlation (PRIMARY, tie-robust, dimensionality-fair)
+                    "dcor_Z": float(np.mean([distance_correlation(L, Z) for L in lat])),
+                    "dcor_Vemb": float(np.mean([distance_correlation(L, V_emb) for L in lat])),
+                    # mutual-kNN alignment (SECONDARY)
                     "align_Z_knn": float(np.mean([mutual_knn(L, Z, k) for L in lat])),
+                    "align_Vemb_knn": float(np.mean([mutual_knn(L, V_emb, k) for L in lat])),
                     "align_V_knn": float(np.mean([mutual_knn(L, V.reshape(-1, 1), k) for L in lat])),
                     "cka_between_seed": float(cka),                             # secondary/global
                     "participation_ratio": float(np.mean([participation_ratio(L) for L in lat])),
                     "value_pair_enc_dist": float(np.nanmean([c["value_pair_enc_dist"] for c in ct])),
                     "reality_pair_enc_dist": float(np.nanmean([c["reality_pair_enc_dist"] for c in ct])),
                     "gaussian_null_knn": gnull,
+                    "reality_value_dcor": meta["reality_value_dcor"],
                     "provenance_sha": meta["provenance_sha"],
                 }
                 out.write(json.dumps(row) + "\n")
                 print(f"[geometry] {obj} step={step} between_seed={row['between_seed_knn']:.3f} "
-                      f"alignZ={row['align_Z_knn']:.3f} alignV={row['align_V_knn']:.3f}")
+                      f"dcorZ={row['dcor_Z']:.3f} dcorVemb={row['dcor_Vemb']:.3f}")
 
 
 def main():
@@ -90,7 +96,7 @@ def main():
           f"objectives={cfg['objectives']}\n[config] schedule={cfg['train']['schedule']}")
 
     buf, ds = load_buffer(cfg)
-    probe_idx, Z, V, meta = build_probe(buf, cfg, run_dir)
+    probe_idx, Z, V, V_emb, meta = build_probe(buf, cfg, run_dir)
     print(f"[data] {buf.dataset_id} states={buf.n_states} trans={buf.n_trans} "
           f"probe={len(probe_idx)} sha={meta['provenance_sha']}")
 
@@ -105,7 +111,7 @@ def main():
     if args.stage in ("all", "train"):
         stage_train(cfg, ctx, run_dir)
     if args.stage in ("all", "geometry"):
-        stage_geometry(cfg, ctx, run_dir, probe_idx, Z, V, meta)
+        stage_geometry(cfg, ctx, run_dir, probe_idx, Z, V, V_emb, meta)
     if args.stage in ("all", "analyze"):
         analyze.run(cfg, run_dir, meta)
 

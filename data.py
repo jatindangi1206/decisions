@@ -158,26 +158,88 @@ def _bfs_from(maze, goal_rc):
     return dist
 
 
-def geodesic_to_goal(maze, positions, goals):
-    """Walls-aware shortest-path length from each position's cell to its goal's cell.
+def _free_cells(maze):
+    grid = maze.maze_map
+    return [(r, c) for r in range(len(grid)) for c in range(len(grid[0])) if not _wall(grid[r][c])]
 
-    This is V: two states equally close to the goal in Euclidean terms can be far apart here
-    if a wall sits between them — that separation is the whole point of using a walled maze.
+
+def _continuous_geo(maze, bfs, positions):
+    """De-quantized walls-aware geodesic from a BFS source to each continuous position.
+
+    Cell-level BFS gives integer distances (lots of ties -> bad for kNN and distance-correlation).
+    We de-quantize by projecting the sub-cell offset onto the local goal-ward gradient of the BFS
+    field: moving toward the closer neighbour cell smoothly reduces distance. Result is continuous
+    and tie-free, a fair anchor against continuous reality Z.
     """
-    scaling = float(maze.maze_size_scaling)
-    caches = {}
-    out = np.empty(len(positions), np.float32)
-    for i, (p, g) in enumerate(zip(positions, goals)):
-        grc = tuple(int(x) for x in maze.cell_xy_to_rowcol(np.asarray(g, np.float64)))
-        if grc not in caches:
-            caches[grc] = _bfs_from(maze, grc)
-        prc = tuple(int(x) for x in maze.cell_xy_to_rowcol(np.asarray(p, np.float64)))
-        d = caches[grc].get(prc)
-        out[i] = (d * scaling) if d is not None else np.nan
-    # unreachable cells (walls / rounding) -> max finite distance, so V stays a usable metric
+    s = float(maze.maze_size_scaling)
+    out = np.empty(len(positions), np.float64)
+    dcache = {}
+    for i, p in enumerate(positions):
+        p = np.asarray(p, np.float64)
+        rc = tuple(int(x) for x in maze.cell_xy_to_rowcol(p))
+        d = bfs.get(rc)
+        if d is None:
+            out[i] = np.nan
+            continue
+        if rc not in dcache:
+            cc = np.asarray(maze.cell_rowcol_to_xy(np.asarray(rc, np.float64)), np.float64)
+            grad = np.zeros(2)
+            for dr, dc in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                dn = bfs.get((rc[0] + dr, rc[1] + dc))
+                if dn is not None:
+                    vec = np.asarray(maze.cell_rowcol_to_xy(np.asarray((rc[0] + dr, rc[1] + dc),
+                                     np.float64)), np.float64) - cc
+                    nv = np.linalg.norm(vec)
+                    if nv > 0:
+                        grad += (d - dn) * vec / nv   # points toward decreasing distance (goal-ward)
+            ng = np.linalg.norm(grad)
+            dcache[rc] = (cc, grad / ng if ng > 0 else np.zeros(2))
+        cc, u = dcache[rc]
+        off = float(np.clip(np.dot(p - cc, u), -s / 2, s / 2))
+        out[i] = d * s - off
     if np.isnan(out).any():
-        out[np.isnan(out)] = np.nanmax(out) + scaling
-    return out
+        out[np.isnan(out)] = np.nanmax(out) + s
+    return out.astype(np.float32)
+
+
+def _farthest_point_landmarks(maze, n, seed):
+    """Deterministic farthest-point sampling of free cells (geodesic) -> spread landmarks."""
+    free = _free_cells(maze)
+    rng = np.random.default_rng(seed)
+    chosen = [free[int(rng.integers(len(free)))]]
+    dmin = {c: v for c, v in _bfs_from(maze, chosen[0]).items()}
+    dmin = {c: dmin.get(c, 1e9) for c in free}
+    while len(chosen) < min(n, len(free)):
+        nxt = max(free, key=lambda c: dmin[c])
+        chosen.append(nxt)
+        b = _bfs_from(maze, nxt)
+        for c in free:
+            dmin[c] = min(dmin[c], b.get(c, 1e9))
+    return chosen
+
+
+def build_value_anchors(maze, positions, goals, n_landmarks, seed):
+    """Value / reachability geometry as a fair anchor comparable to reality Z:
+
+      V     = continuous walls-aware geodesic to each state's OWN goal (the scalar "closeness to
+              goal" value).
+      V_emb = continuous walls-aware geodesic to `n_landmarks` fixed, spread landmarks — a
+              multi-dim embedding of the walls-aware reachability manifold, dimensionality-fair
+              against Z. This is the anchor the reality-vs-value statistic runs on.
+    """
+    from collections import defaultdict
+    positions = np.asarray(positions, np.float64)
+    V = np.empty(len(positions), np.float32)
+    groups = defaultdict(list)
+    for i, g in enumerate(goals):
+        groups[tuple(int(x) for x in maze.cell_xy_to_rowcol(np.asarray(g, np.float64)))].append(i)
+    for grc, idxs in groups.items():
+        V[idxs] = _continuous_geo(maze, _bfs_from(maze, grc), positions[idxs])
+    landmarks = _farthest_point_landmarks(maze, n_landmarks, seed)
+    V_emb = np.empty((len(positions), len(landmarks)), np.float32)
+    for j, lc in enumerate(landmarks):
+        V_emb[:, j] = _continuous_geo(maze, _bfs_from(maze, lc), positions)
+    return V, V_emb, [list(c) for c in landmarks]
 
 
 # ---- fixed, stamped probe --------------------------------------------------------------
@@ -185,34 +247,52 @@ def geodesic_to_goal(maze, positions, goals):
 def build_probe(buf, cfg, run_dir):
     """Sample the probe ONCE and stamp provenance. If it already exists on disk, reuse it
     verbatim — the probe must be identical across every objective, seed, and checkpoint."""
+    from geometry import distance_correlation, kernel_health
     npz = os.path.join(run_dir, "probe.npz")
     meta_path = os.path.join(run_dir, "probe_provenance.json")
     if os.path.exists(npz) and os.path.exists(meta_path):
         d = np.load(npz)
-        return d["idx"], d["Z"], d["V"], json.load(open(meta_path))
+        if "V_emb" in d.files:  # else it's a stale pre-V_emb probe -> regenerate below
+            return d["idx"], d["Z"], d["V"], d["V_emb"], json.load(open(meta_path))
 
     rng = np.random.default_rng(cfg["probe"]["seed"])
     idx = rng.choice(buf.n_states, size=min(cfg["probe"]["size"], buf.n_states), replace=False)
     idx.sort()
-    Z = buf.states_phys[idx].astype(np.float32)                       # reality
-    V = geodesic_to_goal(buf.maze, Z[:, :2], buf.states_goal[idx])    # value
-    stamp = hashlib.sha256(Z.tobytes() + buf.dataset_id.encode()).hexdigest()[:16]
+    Z = buf.states_phys[idx].astype(np.float32)                          # reality
+    n_lm = cfg.get("anchors", {}).get("n_landmarks", 8)
+    V, V_emb, landmarks = build_value_anchors(buf.maze, Z[:, :2], buf.states_goal[idx],
+                                              n_lm, cfg["probe"]["seed"])  # value + value embedding
+
+    rv_dcor = float(distance_correlation(Z, V_emb))   # reality vs value: must stay well below 0.3
+    kh = kernel_health(V_emb)                          # value kernel must be non-degenerate
+    stamp = hashlib.sha256(Z.tobytes() + V_emb.tobytes() + buf.dataset_id.encode()).hexdigest()[:16]
     meta = {
         "dataset_id": buf.dataset_id,
         "minari_version": buf.minari_version,
-        "n_episodes_used": None,  # filled by caller if wanted
         "n_states": int(buf.n_states),
         "n_transitions": int(buf.n_trans),
         "probe_seed": cfg["probe"]["seed"],
         "probe_size": int(len(idx)),
         "maze_shape": [len(buf.maze.maze_map), len(buf.maze.maze_map[0])],
         "maze_scaling": float(buf.maze.maze_size_scaling),
+        "n_landmarks": len(landmarks),
+        "landmark_cells": landmarks,
+        "reality_value_dcor": rv_dcor,
+        "env_reject": bool(rv_dcor >= 0.3),           # Z and V too aligned -> maze can't separate them
+        "value_kernel": kh,
         "provenance_sha": stamp,
     }
+    if meta["env_reject"]:
+        print(f"[probe] ENV-REJECT: reality-value dCor={rv_dcor:.3f} >= 0.3 — Z and V too aligned "
+              f"to test reality-vs-value in this maze.")
+    if kh["degenerate"]:
+        print(f"[probe] WARNING: value kernel degenerate {kh} — V_emb lacks real structure.")
     os.makedirs(run_dir, exist_ok=True)
-    np.savez(npz, idx=idx, Z=Z, V=V)
+    np.savez(npz, idx=idx, Z=Z, V=V, V_emb=V_emb)
     json.dump(meta, open(meta_path, "w"), indent=2)
-    return idx, Z, V, meta
+    print(f"[probe] reality-value dCor={rv_dcor:.3f} (env-reject>=0.3: {meta['env_reject']}); "
+          f"value kernel PR={kh['participation_ratio']:.2f} degenerate={kh['degenerate']}")
+    return idx, Z, V, V_emb, meta
 
 
 # ---- encoder inputs (the only place the two obs modes differ) --------------------------
@@ -250,3 +330,48 @@ def render_states(ds, states_phys, idx, size=64):
         point.set_state(np.array([x, y], np.float64), np.array([vx, vy], np.float64))
         frames[j] = preprocess_frame(u.render(), size)  # unwrapped: skip per-frame wrapper re-gating
     return frames
+
+
+if __name__ == "__main__":
+    # self-check the value anchors on a hand-built walled maze (no MuJoCo).
+    class _FakeMaze:
+        maze_size_scaling = 1.0
+
+        def __init__(self, grid):
+            self.maze_map = grid
+            self._xc = len(grid[0]) / 2 * self.maze_size_scaling
+            self._yc = len(grid) / 2 * self.maze_size_scaling
+
+        def cell_rowcol_to_xy(self, rc):
+            return np.array([(rc[1] + 0.5) * self.maze_size_scaling - self._xc,
+                             self._yc - (rc[0] + 0.5) * self.maze_size_scaling])
+
+        def cell_xy_to_rowcol(self, xy):
+            return np.array([int(np.floor((self._yc - xy[1]) / self.maze_size_scaling)),
+                             int(np.floor((xy[0] + self._xc) / self.maze_size_scaling))])
+
+    # the real PointMaze medium-v2 layout (1=wall) — complex interior walls, a realistic fixture.
+    rows = ["########", "#..##..#", "#..#...#", "##...###", "#..#...#", "#.#..#.#", "#...#..#", "########"]
+    grid = [[1 if ch == "#" else 0 for ch in row] for row in rows]
+    m = _FakeMaze(grid)
+    free = _free_cells(m)
+    start = free[0]
+    goal = m.cell_rowcol_to_xy(start)
+    bfs = _bfs_from(m, start)
+    pos = np.array([m.cell_rowcol_to_xy(c) for c in free])
+
+    V = _continuous_geo(m, bfs, pos)
+    assert V.max() - V.min() > 3, "geodesic value must span a real range in a walled maze"
+    # de-quantization: jittered positions yield many more distinct values than integer cell distances
+    jit = pos + np.random.default_rng(0).uniform(-0.3, 0.3, pos.shape)
+    cell_d = [bfs[tuple(int(x) for x in m.cell_xy_to_rowcol(p))] for p in pos]
+    assert len(np.unique(np.round(_continuous_geo(m, bfs, jit), 4))) > len(np.unique(cell_d)), \
+        "continuous V must de-quantize (more distinct values than cell distances)"
+    # multi-landmark embedding: distinct landmarks, non-degenerate kernel
+    _, V_emb, lms = build_value_anchors(m, pos, [goal] * len(free), 6, 0)
+    from geometry import kernel_health
+    kh = kernel_health(V_emb)
+    assert len({tuple(x) for x in lms}) == len(lms), "landmarks must be distinct"
+    assert not kh["degenerate"], f"V_emb must be a non-degenerate anchor, got {kh}"
+    print(f"data value-anchor self-check OK  (V_emb {V_emb.shape}, {len(lms)} landmarks, kernel PR "
+          f"{kh['participation_ratio']:.2f})")

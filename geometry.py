@@ -47,6 +47,40 @@ def participation_ratio(X):
     return float(lam.sum() ** 2 / (np.square(lam).sum() + 1e-12))
 
 
+def distance_correlation(X, Y, subsample=2000, seed=0):
+    """Székely distance correlation between two representations (any dimensionalities). dCor in
+    [0,1]; 0 iff independent. This is the PRIMARY reality-vs-value alignment statistic: unlike
+    mutual-kNN it is tie-robust (uses full distances, not neighbour sets) and dimensionality-fair
+    (a 4-D reality anchor and an 8-D value anchor are compared on equal footing). O(N^2), so the
+    probe is subsampled to `subsample` with a fixed seed -> identical points across all calls.
+    Note: the classic (V-statistic) estimator has a small positive bias — independent data sits
+    at ~0.10 at N=2000, not 0 — so read values against that floor; the 0.3 env-reject threshold
+    is well above it."""
+    X = np.atleast_2d(np.asarray(X, np.float64))
+    Y = np.atleast_2d(np.asarray(Y, np.float64))
+    n = len(X)
+    if n > subsample:
+        sel = np.random.default_rng(seed).choice(n, subsample, replace=False)
+        X, Y = X[sel], Y[sel]
+    a, b = np.sqrt(_sqdist(X)), np.sqrt(_sqdist(Y))
+    A = a - a.mean(0)[None, :] - a.mean(1)[:, None] + a.mean()   # double-centered distance matrices
+    B = b - b.mean(0)[None, :] - b.mean(1)[:, None] + b.mean()
+    dcov2 = (A * B).mean()
+    denom = ((A * A).mean() * (B * B).mean()) ** 0.25
+    return float(np.sqrt(max(dcov2, 0.0)) / denom) if denom > 0 else 0.0
+
+
+def kernel_health(V):
+    """Non-degeneracy check for a value/anchor kernel: it must have real multi-dim structure, not
+    be rank-1 or near-constant. Flags degenerate if effective dim ~1 or pairwise distances barely
+    vary. Guards against a value embedding that would make reality-vs-value comparisons meaningless."""
+    V = np.atleast_2d(np.asarray(V, np.float64))
+    pr = participation_ratio(V)
+    du = np.sqrt(_sqdist(V))[np.triu_indices(len(V), 1)]
+    cv = float(du.std() / (du.mean() + 1e-12))  # coefficient of variation of pairwise distances
+    return {"participation_ratio": pr, "dist_cv": cv, "degenerate": bool(pr < 1.5 or cv < 0.1)}
+
+
 def gaussian_null_knn(n, k, reps=5, seed=0):
     """Chance-level mutual-kNN between two independent Gaussian feature sets — the absolute
     floor. Any real between-seed agreement must clear this to mean anything."""
@@ -99,4 +133,15 @@ if __name__ == "__main__":
     # a rotation preserves neighbours -> mutual-kNN stays 1.0
     Q = np.linalg.qr(rng.standard_normal((16, 16)))[0]
     assert abs(mutual_knn(A, A @ Q, 10) - 1.0) < 1e-9, "rotation invariance"
+
+    # distance correlation: identity -> 1, independent -> near the small-N floor, dimensionality-fair
+    B = rng.standard_normal((1000, 16))
+    assert abs(distance_correlation(B, B.copy()) - 1.0) < 1e-9, "dCor identity must be 1.0"
+    assert distance_correlation(B, rng.standard_normal((1000, 4))) < 0.25, "dCor independent must be low"
+    lin = B @ rng.standard_normal((16, 3))  # a 3-D linear image shares geometry across dims
+    assert distance_correlation(B, lin) > 0.4, "dCor must see shared geometry across dims"
+
+    # kernel health: a rank-1 (degenerate) anchor is flagged, a full-rank one is not
+    assert kernel_health(B)["degenerate"] is False, "full-rank anchor is healthy"
+    assert kernel_health(np.repeat(B[:, :1], 4, 1))["degenerate"] is True, "rank-1 anchor is degenerate"
     print("geometry self-check OK")

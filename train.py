@@ -12,7 +12,7 @@ from models import Encoder
 from objectives import OBJECTIVES, JEPA_HORIZON
 
 HELDOUT_CAP = 4096         # cap predictor competence eval; full held-out set is overkill
-JEPA_RETRIEVAL_CAP = 2048  # bounds the NxN retrieval distance matrix for JEPA multi-step competence
+JEPA_RETRIEVAL_CAP = 512   # candidate pool for JEPA retrieval MRR — smaller pool = more dynamic range
 
 
 def resolve_device(name):

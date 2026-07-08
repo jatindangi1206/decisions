@@ -47,7 +47,8 @@ def _r2(pred, target):
     return float(np.clip(1.0 - mse / (var + 1e-8), 0.0, 1.0)), {"mse": mse, "var": var}
 
 
-JEPA_HORIZON = 5  # multi-step competence horizon; also the difficulty knob (higher = harder)
+JEPA_HORIZON = 2  # short multi-step horizon: hard enough to be informative, not chance-pinned
+                  # (horizon-5 top-1 among 2048 sat at chance). Drop to 1 if MRR still floors.
 
 
 def _variance_loss(z, gamma=1.0, eps=1e-4):
@@ -66,11 +67,20 @@ def _covariance_loss(z):
 
 
 def _retrieval_acc(pred, target):
-    """Top-1 retrieval: fraction where each target is the nearest neighbour of its own prediction.
-    Collapse-robust by construction — if the latent shrinks, all targets look alike and accuracy
-    falls to chance (~1/N), so a degenerate encoder reads as INCOMPETENT instead of maxed-out."""
+    """Top-1 retrieval: fraction where each target is the nearest neighbour of its own prediction."""
     nn = torch.cdist(pred, target).argmin(1)
     return (nn == torch.arange(len(pred), device=pred.device)).float().mean().item()
+
+
+def _retrieval_mrr(pred, target):
+    """Mean reciprocal rank of each true target among the candidate pool (by predicted distance).
+    Graded and rank-based, so it has dynamic range where top-1 sits at chance: partial predictive
+    skill lifts MRR well above the ~ln(N)/N floor, and a collapsed latent still reads near chance.
+    This is the JEPA competence scalar — weak->strong instead of chance-pinned."""
+    d = torch.cdist(pred, target)
+    true_d = d.diagonal()[:, None]
+    ranks = (d < true_d).sum(1) + 1  # 1-based rank of the true target
+    return (1.0 / ranks.float()).mean().item()
 
 
 class BC:
@@ -141,9 +151,10 @@ class JEPA:
     R^2 saturated to ~1.0 while participation ratio collapsed (2.4 -> 1.2) — "competence" was fake.
     Now prediction can only improve when the representation is genuinely richer.
 
-    Competence is multi-step retrieval on a held-out horizon (not 1-step error): it reflects real
-    predictive quality and, being retrieval-based, reads a collapsed latent as incompetent.
-    ponytail: horizon (JEPA_HORIZON) and the three coeffs are the tuning knobs."""
+    Competence is short-horizon (JEPA_HORIZON) retrieval MRR on a held-out set — rank-based so it
+    has dynamic range (top-1 among a big pool sat at chance), reflecting real predictive quality
+    and still reading a collapsed latent as incompetent.
+    ponytail: horizon and the three coeffs are the tuning knobs."""
     type = "predictor"
     tau = 0.99
     sim_coeff, std_coeff, cov_coeff = 25.0, 25.0, 1.0  # VICReg defaults
@@ -181,9 +192,11 @@ class JEPA:
             for a in ms["acts"]:  # roll the predictor forward `horizon` steps with true actions
                 z = self.pred(torch.cat([z, a], 1))
             zt = self.target(ms["target_in"])
-            acc = _retrieval_acc(z, zt)
+            mrr = _retrieval_mrr(z, zt)                 # competence scalar (dynamic range)
+            top1 = _retrieval_acc(z, zt)
             mse = F.mse_loss(z, zt).item()
-        return acc, {"retrieval_acc": acc, "multistep_mse": mse, "horizon": self.horizon}
+        return mrr, {"retrieval_mrr": mrr, "retrieval_top1": top1,
+                     "multistep_mse": mse, "horizon": self.horizon, "pool": len(zt)}
 
 
 class Reward:
@@ -246,4 +259,9 @@ if __name__ == "__main__":
     assert _retrieval_acc(x, x.clone()) == 1.0, "identity retrieval must be perfect"
     collapsed = 1e-3 * torch.randn(N, D)
     assert _retrieval_acc(x, collapsed) < 0.05, "collapsed target must read as ~chance"
-    print("objectives JEPA anti-collapse self-check OK")
+    # MRR: identity -> 1.0; collapsed -> near the ln(N)/N chance floor; and it has dynamic range
+    assert abs(_retrieval_mrr(x, x.clone()) - 1.0) < 1e-6, "identity MRR must be 1.0"
+    assert _retrieval_mrr(x, collapsed) < 0.05, "collapsed MRR must be near chance"
+    noisy = x + 1.5 * torch.randn(N, D)  # partial predictive skill -> MRR well above chance, below 1
+    assert 0.1 < _retrieval_mrr(x, noisy) < 0.9, "MRR must span the middle (dynamic range)"
+    print("objectives JEPA anti-collapse + retrieval self-check OK")

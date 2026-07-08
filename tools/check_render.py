@@ -23,11 +23,14 @@ def main():
     for row in buf.maze.maze_map:
         print("  " + "".join("#" if str(c) == "1" else "." for c in row))
 
-    probe_idx, Z, V, meta = build_probe(buf, cfg, "runs/_render_check")
+    probe_idx, Z, V, V_emb, meta = build_probe(buf, cfg, "runs/_render_check")
     print(f"\nprovenance sha={meta['provenance_sha']}  maze_scaling={meta['maze_scaling']}")
     finite = V[np.isfinite(V)]
     print(f"Z (physical) shape={Z.shape}  V (geodesic-to-goal) "
           f"min={finite.min():.2f} max={finite.max():.2f} mean={finite.mean():.2f}")
+    print(f"V_emb shape={V_emb.shape} ({meta['n_landmarks']} landmarks)  "
+          f"reality-value dCor={meta['reality_value_dcor']:.3f} (env-reject>=0.3: {meta['env_reject']})  "
+          f"value kernel PR={meta['value_kernel']['participation_ratio']:.2f}")
 
     # the walls payoff: pairs close in value V but far in reality Z must exist, else the maze
     # adds nothing over straight-line distance.

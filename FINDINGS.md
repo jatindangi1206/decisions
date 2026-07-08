@@ -115,6 +115,8 @@ largest at initialization and decreases with training. Independently-trained dec
 here, become more alike inside as they improve — and separately, to the extent their representations
 are organized at all, they align with physical reality, not with proximity to the goal.
 
-_Artifacts: `runs/prh_rl_claimA_pixels/` (`verdict.json`, `competence.jsonl`, `geometry.jsonl`,
-`plots/`); prior truncated run `runs/archive/pixels_schedule_10k/`. Reproduce: `python run.py
---obs-type pixels`._
+_Artifacts: `runs/archive/pixels_powered_100k/` (`verdict.json`, `competence.jsonl`,
+`geometry.jsonl`, `plots/`); earlier truncated run `runs/archive/pixels_schedule_10k/`. An
+instrument-fixed re-run (continuous multi-dim value anchor + distance-correlation reality-vs-value,
+dense sub-1000 competence rungs, recalibrated JEPA metric) is pre-registered in `PREREGISTRATION.md`
+and writes to `runs/prh_rl_claimA_pixels/`. Reproduce: `python run.py --obs-type pixels`._
