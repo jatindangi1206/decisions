@@ -1,0 +1,56 @@
+{
+  "dataset_id": "D4RL/pointmaze/medium-v2",
+  "minari_version": "0.5.3",
+  "n_states": 418840,
+  "n_transitions": 416840,
+  "probe_seed": 12345,
+  "probe_size": 4000,
+  "maze_shape": [
+    8,
+    8
+  ],
+  "maze_scaling": 1.0,
+  "n_landmarks": 8,
+  "landmark_cells": [
+    [
+      5,
+      3
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "reality_value_dcor": 0.5446952699999016,
+  "env_reject": true,
+  "value_kernel": {
+    "participation_ratio": 2.885033839982091,
+    "dist_cv": 0.4482860549570184,
+    "degenerate": false
+  },
+  "provenance_sha": "bf727bc044a372a2"
+}

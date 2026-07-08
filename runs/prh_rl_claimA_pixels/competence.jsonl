@@ -1,0 +1,512 @@
+{"objective": "bc", "seed": 0, "step": 0, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 0, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 0, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 0, "step": 200, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 0, "step": 350, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 0, "step": 500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.16}}
+{"objective": "bc", "seed": 0, "step": 750, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "bc", "seed": 0, "step": 1000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 0, "step": 1500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.2}}
+{"objective": "bc", "seed": 0, "step": 2000, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 0, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 0, "step": 5000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 0, "step": 7500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 0, "step": 10000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 0, "step": 20000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "bc", "seed": 0, "step": 40000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 1, "step": 0, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 1, "step": 50, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "bc", "seed": 1, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 1, "step": 200, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 1, "step": 350, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 1, "step": 500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "bc", "seed": 1, "step": 750, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 1, "step": 1000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 1, "step": 1500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 1, "step": 2000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 1, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 1, "step": 5000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.12}}
+{"objective": "bc", "seed": 1, "step": 7500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 1, "step": 10000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "bc", "seed": 1, "step": 20000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 1, "step": 40000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 2, "step": 0, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.04}}
+{"objective": "bc", "seed": 2, "step": 50, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "bc", "seed": 2, "step": 100, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "bc", "seed": 2, "step": 200, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 2, "step": 350, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "bc", "seed": 2, "step": 500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 2, "step": 750, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 2, "step": 1000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 2, "step": 1500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 2, "step": 2000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 2, "step": 3500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 2, "step": 5000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 2, "step": 7500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 2, "step": 10000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.2}}
+{"objective": "bc", "seed": 2, "step": 20000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 2, "step": 40000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "bc", "seed": 3, "step": 0, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 3, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 3, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 3, "step": 200, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 3, "step": 350, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.12}}
+{"objective": "bc", "seed": 3, "step": 500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 3, "step": 750, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.12}}
+{"objective": "bc", "seed": 3, "step": 1000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 3, "step": 1500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 3, "step": 2000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.08}}
+{"objective": "bc", "seed": 3, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 3, "step": 5000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 3, "step": 7500, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "bc", "seed": 3, "step": 10000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 3, "step": 20000, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 3, "step": 40000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 4, "step": 0, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "bc", "seed": 4, "step": 50, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "bc", "seed": 4, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 4, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 4, "step": 350, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 4, "step": 500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.12}}
+{"objective": "bc", "seed": 4, "step": 750, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 4, "step": 1000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 4, "step": 1500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 4, "step": 2000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "bc", "seed": 4, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "bc", "seed": 4, "step": 5000, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 4, "step": 7500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 4, "step": 10000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.12}}
+{"objective": "bc", "seed": 4, "step": 20000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 4, "step": 40000, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 5, "step": 0, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 5, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 5, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 5, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 5, "step": 350, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 5, "step": 500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 5, "step": 750, "competence": 0.36, "type": "policy", "raw": {"return": 0.36, "success_rate": 0.36}}
+{"objective": "bc", "seed": 5, "step": 1000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 5, "step": 1500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 5, "step": 2000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 5, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 5, "step": 5000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 5, "step": 7500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.2}}
+{"objective": "bc", "seed": 5, "step": 10000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "bc", "seed": 5, "step": 20000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 5, "step": 40000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 6, "step": 0, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 6, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 6, "step": 100, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "bc", "seed": 6, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 6, "step": 350, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 6, "step": 500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.28}}
+{"objective": "bc", "seed": 6, "step": 750, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 6, "step": 1000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 6, "step": 1500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "bc", "seed": 6, "step": 2000, "competence": 0.32, "type": "policy", "raw": {"return": 0.32, "success_rate": 0.2}}
+{"objective": "bc", "seed": 6, "step": 3500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 6, "step": 5000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "bc", "seed": 6, "step": 7500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 6, "step": 10000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "bc", "seed": 6, "step": 20000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.28}}
+{"objective": "bc", "seed": 6, "step": 40000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "bc", "seed": 7, "step": 0, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 7, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 7, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "bc", "seed": 7, "step": 200, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 7, "step": 350, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "bc", "seed": 7, "step": 500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.12}}
+{"objective": "bc", "seed": 7, "step": 750, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "bc", "seed": 7, "step": 1000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.08}}
+{"objective": "bc", "seed": 7, "step": 1500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.2}}
+{"objective": "bc", "seed": 7, "step": 2000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 7, "step": 3500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.2}}
+{"objective": "bc", "seed": 7, "step": 5000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 7, "step": 7500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "bc", "seed": 7, "step": 10000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "bc", "seed": 7, "step": 20000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "bc", "seed": 7, "step": 40000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 0, "step": 0, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "cql", "seed": 0, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 0, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 0, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 0, "step": 350, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 0, "step": 500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.28}}
+{"objective": "cql", "seed": 0, "step": 750, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 0, "step": 1000, "competence": 0.32, "type": "policy", "raw": {"return": 0.32, "success_rate": 0.28}}
+{"objective": "cql", "seed": 0, "step": 1500, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 0, "step": 2000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 0, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 0, "step": 5000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "cql", "seed": 0, "step": 7500, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 0, "step": 10000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 0, "step": 20000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 0, "step": 40000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 1, "step": 0, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "cql", "seed": 1, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 1, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 1, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 1, "step": 350, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 1, "step": 500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 1, "step": 750, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "cql", "seed": 1, "step": 1000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 1, "step": 1500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 1, "step": 2000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 1, "step": 3500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 1, "step": 5000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "cql", "seed": 1, "step": 7500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 1, "step": 10000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 1, "step": 20000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 1, "step": 40000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 2, "step": 0, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "cql", "seed": 2, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 2, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 2, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 2, "step": 350, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 2, "step": 500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 2, "step": 750, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 2, "step": 1000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 2, "step": 1500, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 2, "step": 2000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 2, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 2, "step": 5000, "competence": 0.36, "type": "policy", "raw": {"return": 0.36, "success_rate": 0.28}}
+{"objective": "cql", "seed": 2, "step": 7500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 2, "step": 10000, "competence": 0.32, "type": "policy", "raw": {"return": 0.32, "success_rate": 0.28}}
+{"objective": "cql", "seed": 2, "step": 20000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "cql", "seed": 2, "step": 40000, "competence": 0.36, "type": "policy", "raw": {"return": 0.36, "success_rate": 0.36}}
+{"objective": "cql", "seed": 3, "step": 0, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 3, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 3, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 3, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 3, "step": 350, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 3, "step": 500, "competence": 0.52, "type": "policy", "raw": {"return": 0.52, "success_rate": 0.28}}
+{"objective": "cql", "seed": 3, "step": 750, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.12}}
+{"objective": "cql", "seed": 3, "step": 1000, "competence": 0.44, "type": "policy", "raw": {"return": 0.44, "success_rate": 0.32}}
+{"objective": "cql", "seed": 3, "step": 1500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.28}}
+{"objective": "cql", "seed": 3, "step": 2000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 3, "step": 3500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 3, "step": 5000, "competence": 0.4, "type": "policy", "raw": {"return": 0.4, "success_rate": 0.28}}
+{"objective": "cql", "seed": 3, "step": 7500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 3, "step": 10000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 3, "step": 20000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 3, "step": 40000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 4, "step": 0, "competence": 0.0, "type": "policy", "raw": {"return": 0.0, "success_rate": 0.0}}
+{"objective": "cql", "seed": 4, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 4, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 4, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 4, "step": 350, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 4, "step": 500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 4, "step": 750, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 4, "step": 1000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "cql", "seed": 4, "step": 1500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "cql", "seed": 4, "step": 2000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 4, "step": 3500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 4, "step": 5000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "cql", "seed": 4, "step": 7500, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 4, "step": 10000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 4, "step": 20000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "cql", "seed": 4, "step": 40000, "competence": 0.36, "type": "policy", "raw": {"return": 0.36, "success_rate": 0.32}}
+{"objective": "cql", "seed": 5, "step": 0, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 5, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 5, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 5, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 5, "step": 350, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "cql", "seed": 5, "step": 500, "competence": 0.08, "type": "policy", "raw": {"return": 0.08, "success_rate": 0.08}}
+{"objective": "cql", "seed": 5, "step": 750, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.12}}
+{"objective": "cql", "seed": 5, "step": 1000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.12}}
+{"objective": "cql", "seed": 5, "step": 1500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "cql", "seed": 5, "step": 2000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.16}}
+{"objective": "cql", "seed": 5, "step": 3500, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 5, "step": 5000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 5, "step": 7500, "competence": 0.32, "type": "policy", "raw": {"return": 0.32, "success_rate": 0.24}}
+{"objective": "cql", "seed": 5, "step": 10000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "cql", "seed": 5, "step": 20000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 5, "step": 40000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.2}}
+{"objective": "cql", "seed": 6, "step": 0, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 6, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 6, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 6, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 6, "step": 350, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 6, "step": 500, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 6, "step": 750, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.16}}
+{"objective": "cql", "seed": 6, "step": 1000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "cql", "seed": 6, "step": 1500, "competence": 0.48, "type": "policy", "raw": {"return": 0.48, "success_rate": 0.36}}
+{"objective": "cql", "seed": 6, "step": 2000, "competence": 0.16, "type": "policy", "raw": {"return": 0.16, "success_rate": 0.16}}
+{"objective": "cql", "seed": 6, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.16}}
+{"objective": "cql", "seed": 6, "step": 5000, "competence": 0.4, "type": "policy", "raw": {"return": 0.4, "success_rate": 0.36}}
+{"objective": "cql", "seed": 6, "step": 7500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 6, "step": 10000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.2}}
+{"objective": "cql", "seed": 6, "step": 20000, "competence": 0.4, "type": "policy", "raw": {"return": 0.4, "success_rate": 0.32}}
+{"objective": "cql", "seed": 6, "step": 40000, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 7, "step": 0, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 7, "step": 50, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 7, "step": 100, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 7, "step": 200, "competence": 0.04, "type": "policy", "raw": {"return": 0.04, "success_rate": 0.04}}
+{"objective": "cql", "seed": 7, "step": 350, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 7, "step": 500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.16}}
+{"objective": "cql", "seed": 7, "step": 750, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.2}}
+{"objective": "cql", "seed": 7, "step": 1000, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.2}}
+{"objective": "cql", "seed": 7, "step": 1500, "competence": 0.24, "type": "policy", "raw": {"return": 0.24, "success_rate": 0.24}}
+{"objective": "cql", "seed": 7, "step": 2000, "competence": 0.44, "type": "policy", "raw": {"return": 0.44, "success_rate": 0.32}}
+{"objective": "cql", "seed": 7, "step": 3500, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 7, "step": 5000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 7, "step": 7500, "competence": 0.12, "type": "policy", "raw": {"return": 0.12, "success_rate": 0.12}}
+{"objective": "cql", "seed": 7, "step": 10000, "competence": 0.28, "type": "policy", "raw": {"return": 0.28, "success_rate": 0.24}}
+{"objective": "cql", "seed": 7, "step": 20000, "competence": 0.2, "type": "policy", "raw": {"return": 0.2, "success_rate": 0.2}}
+{"objective": "cql", "seed": 7, "step": 40000, "competence": 0.32, "type": "policy", "raw": {"return": 0.32, "success_rate": 0.32}}
+{"objective": "jepa", "seed": 0, "step": 0, "competence": 0.011413798667490482, "type": "predictor", "raw": {"retrieval_mrr": 0.011413798667490482, "retrieval_top1": 0.0, "multistep_mse": 0.0022282088175415993, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 50, "competence": 0.013156596571207047, "type": "predictor", "raw": {"retrieval_mrr": 0.013156596571207047, "retrieval_top1": 0.001953125, "multistep_mse": 0.0007281226571649313, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 100, "competence": 0.0133119598031044, "type": "predictor", "raw": {"retrieval_mrr": 0.0133119598031044, "retrieval_top1": 0.001953125, "multistep_mse": 0.021172504872083664, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 200, "competence": 0.013313589617609978, "type": "predictor", "raw": {"retrieval_mrr": 0.013313589617609978, "retrieval_top1": 0.001953125, "multistep_mse": 6.893342018127441, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 350, "competence": 0.013313633389770985, "type": "predictor", "raw": {"retrieval_mrr": 0.013313633389770985, "retrieval_top1": 0.001953125, "multistep_mse": 240.27340698242188, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 500, "competence": 0.013313637115061283, "type": "predictor", "raw": {"retrieval_mrr": 0.013313637115061283, "retrieval_top1": 0.001953125, "multistep_mse": 3686.486328125, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 750, "competence": 0.013314425013959408, "type": "predictor", "raw": {"retrieval_mrr": 0.013314425013959408, "retrieval_top1": 0.001953125, "multistep_mse": 43812.515625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 1000, "competence": 0.013333940878510475, "type": "predictor", "raw": {"retrieval_mrr": 0.013333940878510475, "retrieval_top1": 0.001953125, "multistep_mse": 134752.6875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 1500, "competence": 0.013414881192147732, "type": "predictor", "raw": {"retrieval_mrr": 0.013414881192147732, "retrieval_top1": 0.001953125, "multistep_mse": 120853.6171875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 2000, "competence": 0.01347361970692873, "type": "predictor", "raw": {"retrieval_mrr": 0.01347361970692873, "retrieval_top1": 0.001953125, "multistep_mse": 19459.40234375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 3500, "competence": 0.012830783613026142, "type": "predictor", "raw": {"retrieval_mrr": 0.012830783613026142, "retrieval_top1": 0.0, "multistep_mse": 389.63348388671875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 5000, "competence": 0.016574593260884285, "type": "predictor", "raw": {"retrieval_mrr": 0.016574593260884285, "retrieval_top1": 0.0, "multistep_mse": 67.36729431152344, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 7500, "competence": 0.013597046956419945, "type": "predictor", "raw": {"retrieval_mrr": 0.013597046956419945, "retrieval_top1": 0.001953125, "multistep_mse": 2432.609619140625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 10000, "competence": 0.014200430363416672, "type": "predictor", "raw": {"retrieval_mrr": 0.014200430363416672, "retrieval_top1": 0.001953125, "multistep_mse": 91.87472534179688, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 20000, "competence": 0.013957241550087929, "type": "predictor", "raw": {"retrieval_mrr": 0.013957241550087929, "retrieval_top1": 0.001953125, "multistep_mse": 231.07098388671875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 0, "step": 40000, "competence": 0.017687905579805374, "type": "predictor", "raw": {"retrieval_mrr": 0.017687905579805374, "retrieval_top1": 0.001953125, "multistep_mse": 51.6982421875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 0, "competence": 0.013898062519729137, "type": "predictor", "raw": {"retrieval_mrr": 0.013898062519729137, "retrieval_top1": 0.001953125, "multistep_mse": 0.0022091763094067574, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 50, "competence": 0.01265106350183487, "type": "predictor", "raw": {"retrieval_mrr": 0.01265106350183487, "retrieval_top1": 0.001953125, "multistep_mse": 0.0008691049879416823, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 100, "competence": 0.013308217748999596, "type": "predictor", "raw": {"retrieval_mrr": 0.013308217748999596, "retrieval_top1": 0.001953125, "multistep_mse": 0.019088678061962128, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 200, "competence": 0.01331636868417263, "type": "predictor", "raw": {"retrieval_mrr": 0.01331636868417263, "retrieval_top1": 0.001953125, "multistep_mse": 6.395045280456543, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 350, "competence": 0.013313539326190948, "type": "predictor", "raw": {"retrieval_mrr": 0.013313539326190948, "retrieval_top1": 0.001953125, "multistep_mse": 191.86895751953125, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 500, "competence": 0.01331365667283535, "type": "predictor", "raw": {"retrieval_mrr": 0.01331365667283535, "retrieval_top1": 0.001953125, "multistep_mse": 1701.143310546875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 750, "competence": 0.01331385225057602, "type": "predictor", "raw": {"retrieval_mrr": 0.01331385225057602, "retrieval_top1": 0.001953125, "multistep_mse": 16582.14453125, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 1000, "competence": 0.013393813744187355, "type": "predictor", "raw": {"retrieval_mrr": 0.013393813744187355, "retrieval_top1": 0.001953125, "multistep_mse": 39829.4921875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 1500, "competence": 0.014356661587953568, "type": "predictor", "raw": {"retrieval_mrr": 0.014356661587953568, "retrieval_top1": 0.001953125, "multistep_mse": 47053.671875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 2000, "competence": 0.014300044625997543, "type": "predictor", "raw": {"retrieval_mrr": 0.014300044625997543, "retrieval_top1": 0.001953125, "multistep_mse": 15789.3564453125, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 3500, "competence": 0.013463296927511692, "type": "predictor", "raw": {"retrieval_mrr": 0.013463296927511692, "retrieval_top1": 0.001953125, "multistep_mse": 587.33251953125, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 5000, "competence": 0.015381702221930027, "type": "predictor", "raw": {"retrieval_mrr": 0.015381702221930027, "retrieval_top1": 0.001953125, "multistep_mse": 40.278419494628906, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 7500, "competence": 0.016866467893123627, "type": "predictor", "raw": {"retrieval_mrr": 0.016866467893123627, "retrieval_top1": 0.00390625, "multistep_mse": 19.219554901123047, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 10000, "competence": 0.014282380230724812, "type": "predictor", "raw": {"retrieval_mrr": 0.014282380230724812, "retrieval_top1": 0.001953125, "multistep_mse": 2347.81201171875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 20000, "competence": 0.020267833024263382, "type": "predictor", "raw": {"retrieval_mrr": 0.020267833024263382, "retrieval_top1": 0.00390625, "multistep_mse": 9.419273376464844, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 1, "step": 40000, "competence": 0.04896599054336548, "type": "predictor", "raw": {"retrieval_mrr": 0.04896599054336548, "retrieval_top1": 0.005859375, "multistep_mse": 5.349090576171875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 0, "competence": 0.012882726266980171, "type": "predictor", "raw": {"retrieval_mrr": 0.012882726266980171, "retrieval_top1": 0.0, "multistep_mse": 0.001938519300892949, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 50, "competence": 0.013720103539526463, "type": "predictor", "raw": {"retrieval_mrr": 0.013720103539526463, "retrieval_top1": 0.001953125, "multistep_mse": 0.000628399197012186, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 100, "competence": 0.013305090367794037, "type": "predictor", "raw": {"retrieval_mrr": 0.013305090367794037, "retrieval_top1": 0.001953125, "multistep_mse": 0.003310777246952057, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 200, "competence": 0.013311554677784443, "type": "predictor", "raw": {"retrieval_mrr": 0.013311554677784443, "retrieval_top1": 0.001953125, "multistep_mse": 0.9058322906494141, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 350, "competence": 0.013328684493899345, "type": "predictor", "raw": {"retrieval_mrr": 0.013328684493899345, "retrieval_top1": 0.001953125, "multistep_mse": 19.132415771484375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 500, "competence": 0.01333858072757721, "type": "predictor", "raw": {"retrieval_mrr": 0.01333858072757721, "retrieval_top1": 0.001953125, "multistep_mse": 152.63284301757812, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 750, "competence": 0.013322592712938786, "type": "predictor", "raw": {"retrieval_mrr": 0.013322592712938786, "retrieval_top1": 0.001953125, "multistep_mse": 762.487060546875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 1000, "competence": 0.013321158476173878, "type": "predictor", "raw": {"retrieval_mrr": 0.013321158476173878, "retrieval_top1": 0.001953125, "multistep_mse": 1087.9534912109375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 1500, "competence": 0.013374662958085537, "type": "predictor", "raw": {"retrieval_mrr": 0.013374662958085537, "retrieval_top1": 0.001953125, "multistep_mse": 670.3204345703125, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 2000, "competence": 0.013359660282731056, "type": "predictor", "raw": {"retrieval_mrr": 0.013359660282731056, "retrieval_top1": 0.001953125, "multistep_mse": 111.48408508300781, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 3500, "competence": 0.016845716163516045, "type": "predictor", "raw": {"retrieval_mrr": 0.016845716163516045, "retrieval_top1": 0.0, "multistep_mse": 0.5052235126495361, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 5000, "competence": 0.013612578622996807, "type": "predictor", "raw": {"retrieval_mrr": 0.013612578622996807, "retrieval_top1": 0.001953125, "multistep_mse": 4.945584297180176, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 7500, "competence": 0.014460363425314426, "type": "predictor", "raw": {"retrieval_mrr": 0.014460363425314426, "retrieval_top1": 0.0, "multistep_mse": 4.527593612670898, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 10000, "competence": 0.015968820080161095, "type": "predictor", "raw": {"retrieval_mrr": 0.015968820080161095, "retrieval_top1": 0.00390625, "multistep_mse": 1.0790486335754395, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 20000, "competence": 0.01503604743629694, "type": "predictor", "raw": {"retrieval_mrr": 0.01503604743629694, "retrieval_top1": 0.001953125, "multistep_mse": 0.9965134859085083, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 2, "step": 40000, "competence": 0.01337686087936163, "type": "predictor", "raw": {"retrieval_mrr": 0.01337686087936163, "retrieval_top1": 0.001953125, "multistep_mse": 92.2364730834961, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 0, "competence": 0.015293705277144909, "type": "predictor", "raw": {"retrieval_mrr": 0.015293705277144909, "retrieval_top1": 0.001953125, "multistep_mse": 0.002186807803809643, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 50, "competence": 0.012268630787730217, "type": "predictor", "raw": {"retrieval_mrr": 0.012268630787730217, "retrieval_top1": 0.001953125, "multistep_mse": 0.0006733502959832549, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 100, "competence": 0.013438653200864792, "type": "predictor", "raw": {"retrieval_mrr": 0.013438653200864792, "retrieval_top1": 0.001953125, "multistep_mse": 0.001234141644090414, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 200, "competence": 0.01331251859664917, "type": "predictor", "raw": {"retrieval_mrr": 0.01331251859664917, "retrieval_top1": 0.001953125, "multistep_mse": 0.4707391858100891, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 350, "competence": 0.013315019197762012, "type": "predictor", "raw": {"retrieval_mrr": 0.013315019197762012, "retrieval_top1": 0.001953125, "multistep_mse": 23.306015014648438, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 500, "competence": 0.013315366581082344, "type": "predictor", "raw": {"retrieval_mrr": 0.013315366581082344, "retrieval_top1": 0.001953125, "multistep_mse": 180.93167114257812, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 750, "competence": 0.013313926756381989, "type": "predictor", "raw": {"retrieval_mrr": 0.013313926756381989, "retrieval_top1": 0.001953125, "multistep_mse": 1093.939208984375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 1000, "competence": 0.01332109235227108, "type": "predictor", "raw": {"retrieval_mrr": 0.01332109235227108, "retrieval_top1": 0.001953125, "multistep_mse": 1170.040283203125, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 1500, "competence": 0.013320735655725002, "type": "predictor", "raw": {"retrieval_mrr": 0.013320735655725002, "retrieval_top1": 0.001953125, "multistep_mse": 360.059326171875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 2000, "competence": 0.013368843123316765, "type": "predictor", "raw": {"retrieval_mrr": 0.013368843123316765, "retrieval_top1": 0.001953125, "multistep_mse": 10.644923210144043, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 3500, "competence": 0.013598439283668995, "type": "predictor", "raw": {"retrieval_mrr": 0.013598439283668995, "retrieval_top1": 0.001953125, "multistep_mse": 4.349104881286621, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 5000, "competence": 0.024680187925696373, "type": "predictor", "raw": {"retrieval_mrr": 0.024680187925696373, "retrieval_top1": 0.00390625, "multistep_mse": 0.5105853080749512, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 7500, "competence": 0.026017028838396072, "type": "predictor", "raw": {"retrieval_mrr": 0.026017028838396072, "retrieval_top1": 0.00390625, "multistep_mse": 0.5077757835388184, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 10000, "competence": 0.032951563596725464, "type": "predictor", "raw": {"retrieval_mrr": 0.032951563596725464, "retrieval_top1": 0.005859375, "multistep_mse": 0.5156773328781128, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 20000, "competence": 0.030010655522346497, "type": "predictor", "raw": {"retrieval_mrr": 0.030010655522346497, "retrieval_top1": 0.005859375, "multistep_mse": 0.5703514814376831, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 3, "step": 40000, "competence": 0.028740424662828445, "type": "predictor", "raw": {"retrieval_mrr": 0.028740424662828445, "retrieval_top1": 0.009765625, "multistep_mse": 0.6324115991592407, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 0, "competence": 0.013900340534746647, "type": "predictor", "raw": {"retrieval_mrr": 0.013900340534746647, "retrieval_top1": 0.001953125, "multistep_mse": 0.002055810298770666, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 50, "competence": 0.013753687962889671, "type": "predictor", "raw": {"retrieval_mrr": 0.013753687962889671, "retrieval_top1": 0.001953125, "multistep_mse": 0.0008823602693155408, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 100, "competence": 0.013303523883223534, "type": "predictor", "raw": {"retrieval_mrr": 0.013303523883223534, "retrieval_top1": 0.001953125, "multistep_mse": 0.03941814973950386, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 200, "competence": 0.013313527218997478, "type": "predictor", "raw": {"retrieval_mrr": 0.013313527218997478, "retrieval_top1": 0.001953125, "multistep_mse": 11.772225379943848, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 350, "competence": 0.013313528150320053, "type": "predictor", "raw": {"retrieval_mrr": 0.013313528150320053, "retrieval_top1": 0.001953125, "multistep_mse": 392.3818054199219, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 500, "competence": 0.01331354770809412, "type": "predictor", "raw": {"retrieval_mrr": 0.01331354770809412, "retrieval_top1": 0.001953125, "multistep_mse": 4030.353759765625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 750, "competence": 0.01331375166773796, "type": "predictor", "raw": {"retrieval_mrr": 0.01331375166773796, "retrieval_top1": 0.001953125, "multistep_mse": 46980.1015625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 1000, "competence": 0.013315148651599884, "type": "predictor", "raw": {"retrieval_mrr": 0.013315148651599884, "retrieval_top1": 0.001953125, "multistep_mse": 135091.859375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 1500, "competence": 0.013330480083823204, "type": "predictor", "raw": {"retrieval_mrr": 0.013330480083823204, "retrieval_top1": 0.001953125, "multistep_mse": 117836.7421875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 2000, "competence": 0.013432543724775314, "type": "predictor", "raw": {"retrieval_mrr": 0.013432543724775314, "retrieval_top1": 0.001953125, "multistep_mse": 28812.00390625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 3500, "competence": 0.013402746059000492, "type": "predictor", "raw": {"retrieval_mrr": 0.013402746059000492, "retrieval_top1": 0.001953125, "multistep_mse": 1372.20849609375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 5000, "competence": 0.013575701043009758, "type": "predictor", "raw": {"retrieval_mrr": 0.013575701043009758, "retrieval_top1": 0.001953125, "multistep_mse": 4542.1318359375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 7500, "competence": 0.01495200116187334, "type": "predictor", "raw": {"retrieval_mrr": 0.01495200116187334, "retrieval_top1": 0.001953125, "multistep_mse": 96.383056640625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 10000, "competence": 0.015153185464441776, "type": "predictor", "raw": {"retrieval_mrr": 0.015153185464441776, "retrieval_top1": 0.00390625, "multistep_mse": 62.82810974121094, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 20000, "competence": 0.014654488302767277, "type": "predictor", "raw": {"retrieval_mrr": 0.014654488302767277, "retrieval_top1": 0.001953125, "multistep_mse": 188.57273864746094, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 4, "step": 40000, "competence": 0.2425900399684906, "type": "predictor", "raw": {"retrieval_mrr": 0.2425900399684906, "retrieval_top1": 0.0, "multistep_mse": 0.7653307914733887, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 0, "competence": 0.010437002405524254, "type": "predictor", "raw": {"retrieval_mrr": 0.010437002405524254, "retrieval_top1": 0.001953125, "multistep_mse": 0.0020735443104058504, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 50, "competence": 0.013583497144281864, "type": "predictor", "raw": {"retrieval_mrr": 0.013583497144281864, "retrieval_top1": 0.001953125, "multistep_mse": 0.0006647840491496027, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 100, "competence": 0.013323357328772545, "type": "predictor", "raw": {"retrieval_mrr": 0.013323357328772545, "retrieval_top1": 0.001953125, "multistep_mse": 0.011995824053883553, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 200, "competence": 0.013313579373061657, "type": "predictor", "raw": {"retrieval_mrr": 0.013313579373061657, "retrieval_top1": 0.001953125, "multistep_mse": 7.949367523193359, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 350, "competence": 0.013313805684447289, "type": "predictor", "raw": {"retrieval_mrr": 0.013313805684447289, "retrieval_top1": 0.001953125, "multistep_mse": 720.5115356445312, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 500, "competence": 0.013313764706254005, "type": "predictor", "raw": {"retrieval_mrr": 0.013313764706254005, "retrieval_top1": 0.001953125, "multistep_mse": 12643.857421875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 750, "competence": 0.014291739091277122, "type": "predictor", "raw": {"retrieval_mrr": 0.014291739091277122, "retrieval_top1": 0.001953125, "multistep_mse": 245247.609375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 1000, "competence": 0.013640600256621838, "type": "predictor", "raw": {"retrieval_mrr": 0.013640600256621838, "retrieval_top1": 0.001953125, "multistep_mse": 792457.6875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 1500, "competence": 0.013644415885210037, "type": "predictor", "raw": {"retrieval_mrr": 0.013644415885210037, "retrieval_top1": 0.001953125, "multistep_mse": 580589.75, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 2000, "competence": 0.013019781559705734, "type": "predictor", "raw": {"retrieval_mrr": 0.013019781559705734, "retrieval_top1": 0.001953125, "multistep_mse": 78466.2265625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 3500, "competence": 0.013129396364092827, "type": "predictor", "raw": {"retrieval_mrr": 0.013129396364092827, "retrieval_top1": 0.001953125, "multistep_mse": 1794.490478515625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 5000, "competence": 0.4011922776699066, "type": "predictor", "raw": {"retrieval_mrr": 0.4011922776699066, "retrieval_top1": 0.001953125, "multistep_mse": 5.643493175506592, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 7500, "competence": 0.014012880623340607, "type": "predictor", "raw": {"retrieval_mrr": 0.014012880623340607, "retrieval_top1": 0.001953125, "multistep_mse": 1146.2547607421875, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 10000, "competence": 0.18539530038833618, "type": "predictor", "raw": {"retrieval_mrr": 0.18539530038833618, "retrieval_top1": 0.0, "multistep_mse": 5.835002899169922, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 20000, "competence": 0.018841587007045746, "type": "predictor", "raw": {"retrieval_mrr": 0.018841587007045746, "retrieval_top1": 0.00390625, "multistep_mse": 447.72796630859375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 5, "step": 40000, "competence": 0.022889593616127968, "type": "predictor", "raw": {"retrieval_mrr": 0.022889593616127968, "retrieval_top1": 0.001953125, "multistep_mse": 77.3592758178711, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 0, "competence": 0.011611878871917725, "type": "predictor", "raw": {"retrieval_mrr": 0.011611878871917725, "retrieval_top1": 0.0, "multistep_mse": 0.002122004283592105, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 50, "competence": 0.011877198703587055, "type": "predictor", "raw": {"retrieval_mrr": 0.011877198703587055, "retrieval_top1": 0.001953125, "multistep_mse": 0.0010921638458967209, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 100, "competence": 0.013460110872983932, "type": "predictor", "raw": {"retrieval_mrr": 0.013460110872983932, "retrieval_top1": 0.001953125, "multistep_mse": 0.014773659408092499, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 200, "competence": 0.01331831980496645, "type": "predictor", "raw": {"retrieval_mrr": 0.01331831980496645, "retrieval_top1": 0.001953125, "multistep_mse": 3.934422492980957, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 350, "competence": 0.01331451814621687, "type": "predictor", "raw": {"retrieval_mrr": 0.01331451814621687, "retrieval_top1": 0.001953125, "multistep_mse": 103.90724182128906, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 500, "competence": 0.01331348903477192, "type": "predictor", "raw": {"retrieval_mrr": 0.01331348903477192, "retrieval_top1": 0.001953125, "multistep_mse": 614.2789916992188, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 750, "competence": 0.013313861563801765, "type": "predictor", "raw": {"retrieval_mrr": 0.013313861563801765, "retrieval_top1": 0.001953125, "multistep_mse": 3045.683837890625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 1000, "competence": 0.01331319473683834, "type": "predictor", "raw": {"retrieval_mrr": 0.01331319473683834, "retrieval_top1": 0.001953125, "multistep_mse": 4330.4140625, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 1500, "competence": 0.013315359130501747, "type": "predictor", "raw": {"retrieval_mrr": 0.013315359130501747, "retrieval_top1": 0.001953125, "multistep_mse": 1252.794189453125, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 2000, "competence": 0.013305011205375195, "type": "predictor", "raw": {"retrieval_mrr": 0.013305011205375195, "retrieval_top1": 0.001953125, "multistep_mse": 161.05313110351562, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 3500, "competence": 0.029834119603037834, "type": "predictor", "raw": {"retrieval_mrr": 0.029834119603037834, "retrieval_top1": 0.005859375, "multistep_mse": 0.49967503547668457, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 5000, "competence": 0.04214644059538841, "type": "predictor", "raw": {"retrieval_mrr": 0.04214644059538841, "retrieval_top1": 0.009765625, "multistep_mse": 0.49389052391052246, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 7500, "competence": 0.013385049998760223, "type": "predictor", "raw": {"retrieval_mrr": 0.013385049998760223, "retrieval_top1": 0.001953125, "multistep_mse": 61.21073913574219, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 10000, "competence": 0.033791638910770416, "type": "predictor", "raw": {"retrieval_mrr": 0.033791638910770416, "retrieval_top1": 0.00390625, "multistep_mse": 0.4134688377380371, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 20000, "competence": 0.022510461509227753, "type": "predictor", "raw": {"retrieval_mrr": 0.022510461509227753, "retrieval_top1": 0.00390625, "multistep_mse": 0.8127288818359375, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 6, "step": 40000, "competence": 0.01361674815416336, "type": "predictor", "raw": {"retrieval_mrr": 0.01361674815416336, "retrieval_top1": 0.001953125, "multistep_mse": 28.310470581054688, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 0, "competence": 0.012847136706113815, "type": "predictor", "raw": {"retrieval_mrr": 0.012847136706113815, "retrieval_top1": 0.00390625, "multistep_mse": 0.0019385428167879581, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 50, "competence": 0.012210077606141567, "type": "predictor", "raw": {"retrieval_mrr": 0.012210077606141567, "retrieval_top1": 0.001953125, "multistep_mse": 0.000872006465215236, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 100, "competence": 0.013312446884810925, "type": "predictor", "raw": {"retrieval_mrr": 0.013312446884810925, "retrieval_top1": 0.001953125, "multistep_mse": 0.0059787817299366, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 200, "competence": 0.013311438262462616, "type": "predictor", "raw": {"retrieval_mrr": 0.013311438262462616, "retrieval_top1": 0.001953125, "multistep_mse": 1.4774435758590698, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 350, "competence": 0.013850272633135319, "type": "predictor", "raw": {"retrieval_mrr": 0.013850272633135319, "retrieval_top1": 0.001953125, "multistep_mse": 1.9526880979537964, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 500, "competence": 0.01575167290866375, "type": "predictor", "raw": {"retrieval_mrr": 0.01575167290866375, "retrieval_top1": 0.001953125, "multistep_mse": 2.594031810760498, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 750, "competence": 0.019205303862690926, "type": "predictor", "raw": {"retrieval_mrr": 0.019205303862690926, "retrieval_top1": 0.001953125, "multistep_mse": 1.6628694534301758, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 1000, "competence": 0.08515486121177673, "type": "predictor", "raw": {"retrieval_mrr": 0.08515486121177673, "retrieval_top1": 0.0234375, "multistep_mse": 0.6259620785713196, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 1500, "competence": 0.19602948427200317, "type": "predictor", "raw": {"retrieval_mrr": 0.19602948427200317, "retrieval_top1": 0.07421875, "multistep_mse": 0.3035184144973755, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 2000, "competence": 0.16288498044013977, "type": "predictor", "raw": {"retrieval_mrr": 0.16288498044013977, "retrieval_top1": 0.0546875, "multistep_mse": 0.4659174680709839, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 3500, "competence": 0.23542815446853638, "type": "predictor", "raw": {"retrieval_mrr": 0.23542815446853638, "retrieval_top1": 0.1015625, "multistep_mse": 0.3769407272338867, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 5000, "competence": 0.28851518034935, "type": "predictor", "raw": {"retrieval_mrr": 0.28851518034935, "retrieval_top1": 0.111328125, "multistep_mse": 0.4414154291152954, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 7500, "competence": 0.35847383737564087, "type": "predictor", "raw": {"retrieval_mrr": 0.35847383737564087, "retrieval_top1": 0.16796875, "multistep_mse": 0.5544850826263428, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 10000, "competence": 0.39249366521835327, "type": "predictor", "raw": {"retrieval_mrr": 0.39249366521835327, "retrieval_top1": 0.189453125, "multistep_mse": 0.5954300761222839, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 20000, "competence": 0.6604074239730835, "type": "predictor", "raw": {"retrieval_mrr": 0.6604074239730835, "retrieval_top1": 0.443359375, "multistep_mse": 0.2729952931404114, "horizon": 2, "pool": 512}}
+{"objective": "jepa", "seed": 7, "step": 40000, "competence": 0.7174702882766724, "type": "predictor", "raw": {"retrieval_mrr": 0.7174702882766724, "retrieval_top1": 0.521484375, "multistep_mse": 0.2996247410774231, "horizon": 2, "pool": 512}}
+{"objective": "reward", "seed": 0, "step": 0, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.18342137336730957, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 50, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07686837017536163, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 100, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.08098968863487244, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 200, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.0767650157213211, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 350, "competence": 0.0008906527572353218, "type": "predictor", "raw": {"mse": 0.07661929726600647, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 500, "competence": 0.0024012180663186555, "type": "predictor", "raw": {"mse": 0.0765034556388855, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 750, "competence": 0.06562985996766024, "type": "predictor", "raw": {"mse": 0.07165460288524628, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 1000, "competence": 0.1098557690458587, "type": "predictor", "raw": {"mse": 0.06826302409172058, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 1500, "competence": 0.1637962025165992, "type": "predictor", "raw": {"mse": 0.06412646174430847, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 2000, "competence": 0.1856682127563335, "type": "predictor", "raw": {"mse": 0.062449149787425995, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 3500, "competence": 0.1990690391967206, "type": "predictor", "raw": {"mse": 0.0614214725792408, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 5000, "competence": 0.2057225994377332, "type": "predictor", "raw": {"mse": 0.06091122701764107, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 7500, "competence": 0.2138025402154905, "type": "predictor", "raw": {"mse": 0.0602915957570076, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 10000, "competence": 0.21640707036765838, "type": "predictor", "raw": {"mse": 0.060091860592365265, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 20000, "competence": 0.21341421184268328, "type": "predictor", "raw": {"mse": 0.0603213757276535, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 0, "step": 40000, "competence": 0.2204105833580141, "type": "predictor", "raw": {"mse": 0.059784840792417526, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 0, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.17126014828681946, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 50, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07673733681440353, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 100, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.0776720941066742, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 200, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07711778581142426, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 350, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07733127474784851, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 500, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07678185403347015, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 750, "competence": 0.07129030221346766, "type": "predictor", "raw": {"mse": 0.0712205171585083, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 1000, "competence": 0.11429312750751064, "type": "predictor", "raw": {"mse": 0.06792273372411728, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 1500, "competence": 0.15267098811325897, "type": "predictor", "raw": {"mse": 0.06497962772846222, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 2000, "competence": 0.17488313786592746, "type": "predictor", "raw": {"mse": 0.06327623128890991, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 3500, "competence": 0.1907275572682009, "type": "predictor", "raw": {"mse": 0.062061160802841187, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 5000, "competence": 0.20286230885488854, "type": "predictor", "raw": {"mse": 0.0611305758357048, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 7500, "competence": 0.21148801761719538, "type": "predictor", "raw": {"mse": 0.060469090938568115, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 10000, "competence": 0.2129356265125737, "type": "predictor", "raw": {"mse": 0.06035807728767395, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 20000, "competence": 0.21776641398240237, "type": "predictor", "raw": {"mse": 0.059987615793943405, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 1, "step": 40000, "competence": 0.22154681060844694, "type": "predictor", "raw": {"mse": 0.0596977062523365, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 0, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.25545594096183777, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 50, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07720503956079483, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 100, "competence": 0.0007640598451092995, "type": "predictor", "raw": {"mse": 0.07662900537252426, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 200, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.0767768993973732, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 350, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07709303498268127, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 500, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07800313085317612, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 750, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07827036082744598, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 1000, "competence": 0.009559012546728085, "type": "predictor", "raw": {"mse": 0.07595454156398773, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 1500, "competence": 0.09341510965761635, "type": "predictor", "raw": {"mse": 0.06952381879091263, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 2000, "competence": 0.1545208185406417, "type": "predictor", "raw": {"mse": 0.06483776867389679, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 3500, "competence": 0.18089945872809532, "type": "predictor", "raw": {"mse": 0.0628148540854454, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 5000, "competence": 0.1986728898496799, "type": "predictor", "raw": {"mse": 0.061451852321624756, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 7500, "competence": 0.20688277538566335, "type": "predictor", "raw": {"mse": 0.0608222559094429, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 10000, "competence": 0.2129113377727183, "type": "predictor", "raw": {"mse": 0.06035993993282318, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 20000, "competence": 0.21753984861703168, "type": "predictor", "raw": {"mse": 0.06000499054789543, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 2, "step": 40000, "competence": 0.22227824172045074, "type": "predictor", "raw": {"mse": 0.05964161455631256, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 0, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.21933995187282562, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 50, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07675999402999878, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 100, "competence": 0.0009526376213461196, "type": "predictor", "raw": {"mse": 0.07661454379558563, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 200, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07835716009140015, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 350, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07671208679676056, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 500, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07682763785123825, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 750, "competence": 0.024204734059660837, "type": "predictor", "raw": {"mse": 0.07483139634132385, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 1000, "competence": 0.08184453692028859, "type": "predictor", "raw": {"mse": 0.07041113823652267, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 1500, "competence": 0.1530732096452634, "type": "predictor", "raw": {"mse": 0.06494878232479095, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 2000, "competence": 0.17855520671221725, "type": "predictor", "raw": {"mse": 0.06299462914466858, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 3500, "competence": 0.20195240408242776, "type": "predictor", "raw": {"mse": 0.061200354248285294, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 5000, "competence": 0.2096159387041051, "type": "predictor", "raw": {"mse": 0.06061265617609024, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 7500, "competence": 0.21084047981265197, "type": "predictor", "raw": {"mse": 0.06051874905824661, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 10000, "competence": 0.21160858692183726, "type": "predictor", "raw": {"mse": 0.06045984476804733, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 20000, "competence": 0.2174999665061893, "type": "predictor", "raw": {"mse": 0.06000804901123047, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 3, "step": 40000, "competence": 0.21707520502359912, "type": "predictor", "raw": {"mse": 0.06004062294960022, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 0, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.2575085163116455, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 50, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07680836319923401, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 100, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07777227461338043, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 200, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07689609378576279, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 350, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07887566089630127, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 500, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07852128148078918, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 750, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.0766914039850235, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 1000, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07968766987323761, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 1500, "competence": 0.0833190577394266, "type": "predictor", "raw": {"mse": 0.07029806077480316, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 2000, "competence": 0.13883680197637294, "type": "predictor", "raw": {"mse": 0.0660405382514, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 3500, "competence": 0.20155863503189297, "type": "predictor", "raw": {"mse": 0.061230551451444626, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 5000, "competence": 0.19846546401131537, "type": "predictor", "raw": {"mse": 0.06146775931119919, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 7500, "competence": 0.21276550817862683, "type": "predictor", "raw": {"mse": 0.060371123254299164, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 10000, "competence": 0.20820291697428084, "type": "predictor", "raw": {"mse": 0.0607210174202919, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 20000, "competence": 0.22103577552189058, "type": "predictor", "raw": {"mse": 0.05973689630627632, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 4, "step": 40000, "competence": 0.2195010672053911, "type": "predictor", "raw": {"mse": 0.05985458940267563, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 0, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.23154973983764648, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 50, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07723383605480194, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 100, "competence": 0.000861894889246595, "type": "predictor", "raw": {"mse": 0.07662150263786316, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 200, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07698964327573776, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 350, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.0767454206943512, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 500, "competence": 0.0022672413772766298, "type": "predictor", "raw": {"mse": 0.07651372998952866, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 750, "competence": 0.07771214787626035, "type": "predictor", "raw": {"mse": 0.07072804123163223, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 1000, "competence": 0.11689756050471911, "type": "predictor", "raw": {"mse": 0.06772300601005554, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 1500, "competence": 0.15616118287551195, "type": "predictor", "raw": {"mse": 0.06471197307109833, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 2000, "competence": 0.18410936143241774, "type": "predictor", "raw": {"mse": 0.06256869435310364, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 3500, "competence": 0.19525463833487844, "type": "predictor", "raw": {"mse": 0.061713989824056625, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 5000, "competence": 0.2048876982939457, "type": "predictor", "raw": {"mse": 0.06097525358200073, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 7500, "competence": 0.2057391157808348, "type": "predictor", "raw": {"mse": 0.06090996041893959, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 10000, "competence": 0.21338982594786848, "type": "predictor", "raw": {"mse": 0.06032324582338333, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 20000, "competence": 0.22205726276524684, "type": "predictor", "raw": {"mse": 0.059658560901880264, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 5, "step": 40000, "competence": 0.2171966487228758, "type": "predictor", "raw": {"mse": 0.060031309723854065, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 0, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.20868045091629028, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 50, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07732703536748886, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 100, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07711414992809296, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 200, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.0767134428024292, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 350, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07780037075281143, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 500, "competence": 0.014534706638533734, "type": "predictor", "raw": {"mse": 0.07557296752929688, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 750, "competence": 0.05815922651791405, "type": "predictor", "raw": {"mse": 0.07222750782966614, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 1000, "competence": 0.10116584085537439, "type": "predictor", "raw": {"mse": 0.06892943382263184, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 1500, "competence": 0.15887841278060866, "type": "predictor", "raw": {"mse": 0.06450359523296356, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 2000, "competence": 0.17283967760441787, "type": "predictor", "raw": {"mse": 0.06343293935060501, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 3500, "competence": 0.20238037167867884, "type": "predictor", "raw": {"mse": 0.061167534440755844, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 5000, "competence": 0.2076751226572242, "type": "predictor", "raw": {"mse": 0.06076149269938469, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 7500, "competence": 0.20471296509942638, "type": "predictor", "raw": {"mse": 0.0609886534512043, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 10000, "competence": 0.2088149932186354, "type": "predictor", "raw": {"mse": 0.06067407876253128, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 20000, "competence": 0.21857760931609105, "type": "predictor", "raw": {"mse": 0.05992540717124939, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 6, "step": 40000, "competence": 0.22311489165350773, "type": "predictor", "raw": {"mse": 0.05957745388150215, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 0, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.22824141383171082, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 50, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07761649787425995, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 100, "competence": 0.00018890248533476317, "type": "predictor", "raw": {"mse": 0.07667311280965805, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 200, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07860199362039566, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 350, "competence": 0.0, "type": "predictor", "raw": {"mse": 0.07767286896705627, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 500, "competence": 0.005390676167713937, "type": "predictor", "raw": {"mse": 0.07627420127391815, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 750, "competence": 0.061879872843914496, "type": "predictor", "raw": {"mse": 0.07194218039512634, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 1000, "competence": 0.1245411297822353, "type": "predictor", "raw": {"mse": 0.06713683903217316, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 1500, "competence": 0.14474605807325847, "type": "predictor", "raw": {"mse": 0.0655873715877533, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 2000, "competence": 0.18091694662079116, "type": "predictor", "raw": {"mse": 0.06281351298093796, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 3500, "competence": 0.20264633338009486, "type": "predictor", "raw": {"mse": 0.061147138476371765, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 5000, "competence": 0.20723826538218615, "type": "predictor", "raw": {"mse": 0.06079499423503876, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 7500, "competence": 0.20487846857280068, "type": "predictor", "raw": {"mse": 0.06097596138715744, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 10000, "competence": 0.21860286960554054, "type": "predictor", "raw": {"mse": 0.05992347002029419, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 20000, "competence": 0.214797601309884, "type": "predictor", "raw": {"mse": 0.060215286910533905, "var": 0.07668758928775787}}
+{"objective": "reward", "seed": 7, "step": 40000, "competence": 0.22103490112725588, "type": "predictor", "raw": {"mse": 0.059736963361501694, "var": 0.07668758928775787}}
